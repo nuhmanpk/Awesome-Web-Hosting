@@ -1,6 +1,7 @@
 # Free-API-Hosting
 
-Here is small List of Free API Providers, *Missing Something?? Fork-> Pull*
+[![Awesome](https://awesome.re/badge-flat.svg)](https://github.com/nuhmanpk)
+
 
 ### 1 . [Netlify](https://www.netlify.com/)  
 
