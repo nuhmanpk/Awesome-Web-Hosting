@@ -1,4 +1,4 @@
-# Free-API-Hosting
+# Free-Web-Hosting
 
 [![Awesome](https://awesome.re/badge-flat.svg)](https://github.com/nuhmanpk)
 ![GitHub stars](https://img.shields.io/github/stars/nuhmanpk/Awesome-Web-Hosting)
