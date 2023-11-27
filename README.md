@@ -330,6 +330,10 @@ Cloud computing services by Oracle, including hosting solutions.
 
 ### 35 . [Buddy](https://buddy.works/)
 
+Read Docs : [Here](https://buddy.works/docs)
+
+Buddy.works is an innovative CI/CD platform that accelerates and automates development processes, enabling IT teams to deploy software quickly and efficiently, with a focus on continuous integration and delivery.
+
 ---
 
 CI/CD platform for web developers to build, test, and deploy code.
