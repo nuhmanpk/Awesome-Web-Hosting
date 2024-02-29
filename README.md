@@ -39,7 +39,7 @@
 | 27 | [Github Pages](https://pages.github.com/) | Websites for you and your projects, hosted directly from your GitHub repository. |
 | 28 | [GitLab Pages](https://docs.gitlab.com/ee/user/project/pages/) | Websites for your GitLab projects, served from the GitLab repository. |
 | 29 | [Heroku](https://www.heroku.com/) | Cloud platform as a service supporting several programming languages. |
-| 30 | [InfinityFree](https://infinityfree.net/) | Free hosting with unlimited disk space and unlimited bandwidth. |
+| 30 | [InfinityFree](https://infinityfree.net/) | Free hosting with 5GB disk space and unlimited bandwidth. |
 | 31 | [000webhost](https://www.000webhost.com/) | Free web hosting with PHP, MySQL, cPanel, and no ads. |
 | 32 | [Google Cloud Platform](https://cloud.google.com/) | Cloud computing services by Google, including hosting solutions. |
 | 33 | [Microsoft Azure](https://azure.microsoft.com/) | Cloud computing services by Microsoft, including hosting solutions. |
