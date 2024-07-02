@@ -47,7 +47,8 @@
 | 35 | [Buddy](https://buddy.works/) | CI/CD platform for web developers to build, test, and deploy code. |
 | 36 | [Firebase](https://firebase.google.com/) | App development platform with hosting, real-time database, and more. |
 | 37 | [Infinity](https://startinfinity.com/) | Project management platform with a focus on organization and collaboration. |
-| 38 | Missing Something ? | [Add it here](https://github.com/nuhmanpk/Awesome-Web-Hosting/fork) |
+| 38 | [LinkWave Connect](https://en.linkwaveconnect.com.br/open-source) | Static and Dynamic free hosting for open source projects. |
+| 39 | Missing Something ? | [Add it here](https://github.com/nuhmanpk/Awesome-Web-Hosting/fork) |
 
 
 ### 1 . [Netlify](https://www.netlify.com/)  
@@ -350,6 +351,13 @@ App development platform with hosting, real-time database, and more.
 
 Project management platform with a focus on organization and collaboration.
 
+---
+
+### 38 . [LinkWave Connect](https://en.linkwaveconnect.com.br/open-source/)
+
+Read Docs : [Here](https://en.linkwaveconnect.com.br/open-source/)
+
+Static and Dynamic free hosting for open source projects.
 
 ***Missing an Option ?? Add Now***
 
