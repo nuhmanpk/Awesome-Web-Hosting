@@ -39,16 +39,15 @@
 | 27 | [Github Pages](https://pages.github.com/) | Websites for you and your projects, hosted directly from your GitHub repository. |
 | 28 | [GitLab Pages](https://docs.gitlab.com/ee/user/project/pages/) | Websites for your GitLab projects, served from the GitLab repository. |
 | 29 | [Heroku](https://www.heroku.com/) | Cloud platform as a service supporting several programming languages. |
-| 30 | [InfinityFree](https://infinityfree.net/) | Free hosting with 5GB disk space and unlimited bandwidth. |
-| 31 | [000webhost](https://www.000webhost.com/) | Free web hosting with PHP, MySQL, cPanel, and no ads. |
-| 32 | [Google Cloud Platform](https://cloud.google.com/) | Cloud computing services by Google, including hosting solutions. |
-| 33 | [Microsoft Azure](https://azure.microsoft.com/) | Cloud computing services by Microsoft, including hosting solutions. |
-| 34 | [Oracle Cloud](https://www.oracle.com/cloud/) | Cloud computing services by Oracle, including hosting solutions. |
-| 35 | [Buddy](https://buddy.works/) | CI/CD platform for web developers to build, test, and deploy code. |
-| 36 | [Firebase](https://firebase.google.com/) | App development platform with hosting, real-time database, and more. |
-| 37 | [Infinity](https://startinfinity.com/) | Project management platform with a focus on organization and collaboration. |
-| 38 | [LinkWave Connect](https://en.linkwaveconnect.com.br/open-source) | Static and Dynamic free hosting for open source projects. |
-| 39 | Missing Something ? | [Add it here](https://github.com/nuhmanpk/Awesome-Web-Hosting/fork) |
+| 30 | [InfinityFree](https://infinityfree.net/) | Free hosting with 5GB disk space and unlimited bandwidth. ||
+| 31 | [Google Cloud Platform](https://cloud.google.com/) | Cloud computing services by Google, including hosting solutions. |
+| 32 | [Microsoft Azure](https://azure.microsoft.com/) | Cloud computing services by Microsoft, including hosting solutions. |
+| 33 | [Oracle Cloud](https://www.oracle.com/cloud/) | Cloud computing services by Oracle, including hosting solutions. |
+| 34 | [Buddy](https://buddy.works/) | CI/CD platform for web developers to build, test, and deploy code. |
+| 35 | [Firebase](https://firebase.google.com/) | App development platform with hosting, real-time database, and more. |
+| 36 | [Infinity](https://startinfinity.com/) | Project management platform with a focus on organization and collaboration. |
+| 37 | [LinkWave Connect](https://en.linkwaveconnect.com.br/open-source) | Static and Dynamic free hosting for open source projects. |
+| 38 | Missing Something ? | [Add it here](https://github.com/nuhmanpk/Awesome-Web-Hosting/fork) |
 
 
 ### 1 . [Netlify](https://www.netlify.com/)  
@@ -305,31 +304,26 @@ Cloud platform as a service supporting several programming languages.
 
 Free hosting with unlimited disk space and unlimited bandwidth.
 
-### 31 . [000webhost](https://www.000webhost.com/)
 
----
-
-Free web hosting with PHP, MySQL, cPanel, and no ads.
-
-### 32 . [Google Cloud Platform](https://cloud.google.com/)
+### 31 . [Google Cloud Platform](https://cloud.google.com/)
 
 ---
 
 Cloud computing services by Google, including hosting solutions.
 
-### 33 . [Microsoft Azure](https://azure.microsoft.com/)
+### 32 . [Microsoft Azure](https://azure.microsoft.com/)
 
 ---
 
 Cloud computing services by Microsoft, including hosting solutions.
 
-### 34 . [Oracle Cloud](https://www.oracle.com/cloud/)
+### 33 . [Oracle Cloud](https://www.oracle.com/cloud/)
 
 ---
 
 Cloud computing services by Oracle, including hosting solutions.
 
-### 35 . [Buddy](https://buddy.works/)
+### 34 . [Buddy](https://buddy.works/)
 
 Read Docs : [Here](https://buddy.works/docs)
 
@@ -339,19 +333,19 @@ Buddy.works is an innovative CI/CD platform that accelerates and automates devel
 
 CI/CD platform for web developers to build, test, and deploy code.
 
-### 36 . [Firebase](https://firebase.google.com/)
+### 35 . [Firebase](https://firebase.google.com/)
 
 ---
 
 App development platform with hosting, real-time database, and more.
 
-### 37 . [Infinity](https://startinfinity.com/)
+### 36 . [Infinity](https://startinfinity.com/)
 
 ---
 
 Project management platform with a focus on organization and collaboration.
 
-### 38 . [LinkWave Connect](https://en.linkwaveconnect.com.br/open-source/)
+### 37 . [LinkWave Connect](https://en.linkwaveconnect.com.br/open-source/)
 
 ---
 
