@@ -48,6 +48,7 @@
 | 36 | [Infinity](https://startinfinity.com/) | Project management platform with a focus on organization and collaboration. |
 | 37 | [LinkWave Connect](https://en.linkwaveconnect.com.br/open-source) | Static and Dynamic free hosting for open source projects. |
 | 38 | Missing Something ? | [Add it here](https://github.com/nuhmanpk/Awesome-Web-Hosting/fork) |
+| 39 | * [Erath](https://erath.vercel.app) | Free web page hosting through a storage-less webpage hosting model, embedding data directly into URLs for secure and immutable access. Utilizes AES-256 encryption for data protection and integrity, ensuring perpetual availability without traditional data storage.
 
 
 ### 1 . [Netlify](https://www.netlify.com/)  
@@ -346,6 +347,10 @@ App development platform with hosting, real-time database, and more.
 Project management platform with a focus on organization and collaboration.
 
 ### 37 . [LinkWave Connect](https://en.linkwaveconnect.com.br/open-source/)
+
+### 38 . [Erath](https://erath.vercel.app)
+
+Free web page hosting through a storage-less webpage hosting model, embedding data directly into URLs for secure and immutable access. Utilizes AES-256 encryption for data protection and integrity, ensuring perpetual availability without traditional data storage.
 
 ---
 
