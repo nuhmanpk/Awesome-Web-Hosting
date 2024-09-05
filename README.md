@@ -28,7 +28,7 @@
 | 16 | [Read The Docs](https://readthedocs.org/) | Free documentation hosting with versioning, PDF generation, and more. |
 | 17 | [Render](https://render.com/) | Unified cloud to build and run apps and sites with free SSL, global CDN, and private networks. |
 | 18 | [Sourceforge](https://sourceforge.net/) | Platform to find, create, and publish open-source software for free. |
-| 19 | [StormKit](https://stormkit.io/) | Integrate building, deploying, and hosting seamlessly with your git flow of your JAMStack or Node.JS app. |
+| 19 | [StormKit](https://stormkit.io/) | Full-featured, self-hostable Vercel/Netlify alternative. |
 | 20 | [Surge](https://surge.sh/) | Static web publishing for front-end developers with unlimited sites and custom domain support. |
 | 21 | [Tilda](https://tilda.cc/) | Site with limited pages, storage, and features. |
 | 22 | [Txti](https://txti.es/) | Create web pages quickly with markdown. |
