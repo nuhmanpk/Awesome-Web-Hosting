@@ -5,8 +5,6 @@
 ![GitHub forks](https://img.shields.io/github/forks/nuhmanpk/Awesome-Web-Hosting)
 ![GitHub contributors](https://img.shields.io/github/contributors/nuhmanpk/Awesome-Web-Hosting)
 ![GitHub last commit](https://img.shields.io/github/last-commit/nuhmanpk/Awesome-Web-Hosting)
-![GitHub pull requests](https://img.shields.io/github/issues-pr/nuhmanpk/Awesome-Web-Hosting)
-![GitHub issues](https://img.shields.io/github/issues-raw/nuhmanpk/Awesome-Web-Hosting)
 
 | No. | Hosting Service | Description |
 |-----|-----------------|-------------|
