@@ -5,6 +5,8 @@
 ![GitHub forks](https://img.shields.io/github/forks/nuhmanpk/Awesome-Web-Hosting)
 ![GitHub contributors](https://img.shields.io/github/contributors/nuhmanpk/Awesome-Web-Hosting)
 ![GitHub last commit](https://img.shields.io/github/last-commit/nuhmanpk/Awesome-Web-Hosting)
+[![Visits](https://api.visitorbadge.io/api/visitors?path=[https://github.com/nuhmanpk/awesome-web-hosting](https://github.com/nuhmanpk/portfolio)&countColor=%23007EC6&label=Visits&style=flat-square&token=YOUR_API_TOKEN)](https://github.com/nuhmanpk/awesome-web-hosting)
+
 
 | No. | Hosting Service | Description |
 |-----|-----------------|-------------|
