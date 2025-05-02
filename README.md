@@ -47,7 +47,8 @@
 | 35 | [Firebase](https://firebase.google.com/) | App development platform with hosting, real-time database, and more. |
 | 36 | [Infinity](https://startinfinity.com/) | Project management platform with a focus on organization and collaboration. |
 | 37 | [LinkWave Connect](https://en.linkwaveconnect.com.br/open-source) | Static and Dynamic free hosting for open source projects. |
-| 38 | Missing Something ? | [Add it here](https://github.com/nuhmanpk/Awesome-Web-Hosting/fork) |
+| 38 | [ProFreeHost](https://profreehost.com/) | Free hosting with 5GB of disk, unlimited bandwidth, and more. Support dynamic and static pages. |
+| 39 | Missing Something ? | [Add it here](https://github.com/nuhmanpk/Awesome-Web-Hosting/fork) |
 
 
 ### 1 . [Netlify](https://www.netlify.com/)  
@@ -352,6 +353,14 @@ Project management platform with a focus on organization and collaboration.
 Read Docs : [Here](https://en.linkwaveconnect.com.br/open-source/)
 
 Static and Dynamic free hosting for open source projects.
+
+### 38 . [ProFreeHost](https://profreehost.com/)
+
+---
+
+Read Docs : [Here](https://en.linkwaveconnect.com.br/open-source/)
+
+Free hosting with 5GB of disk, unlimited bandwidth, and more. Support dynamic and static pages.
 
 ***Missing an Option ?? Add Now***
 
