@@ -362,7 +362,10 @@ Read Docs : [Here](https://en.linkwaveconnect.com.br/open-source/)
 
 Free hosting with 5GB of disk, unlimited bandwidth, and more. Support dynamic and static pages.
 
-***Missing an Option ?? Add Now***
 
 
-Reference - [Free-For.dev](https://free-for.dev/)
+---
+
+
+
+Made with ❤️ [Nuhman Pk](https://github.com/nuhmanpk) 🚀
