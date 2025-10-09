@@ -50,7 +50,8 @@
 | 37 | [LinkWave Connect](https://en.linkwaveconnect.com.br/open-source) | Static and Dynamic free hosting for open source projects. |
 | 38 | [ProFreeHost](https://profreehost.com/) | Free hosting with 5GB of disk, unlimited bandwidth, and more. Support dynamic and static pages. |
 | 40 | [sevalla](https://sevalla.com/) | Deploy your app before your coffee gets cold, get $50 free credit |
-| 41 | Missing Something ? | [Add it here](https://github.com/nuhmanpk/Awesome-Web-Hosting/fork) |
+| 41 | [serv00](www.serv00.com) | 3 GB of free web hosting with daily backups (7 days). Support: Crontab jobs, SSH access, repositories (GIT, SVN, and Mercurial), support: MySQL, PostgreSQL, MongoDB, PHP, Node.js, Python, Ruby, Java, Perl, TCL/TK, Lua, Erlang, Rust, Pascal, C, C++, D, R, and many more. |
+| x | Missing Something ? | [Add it here](https://github.com/nuhmanpk/Awesome-Web-Hosting/fork) |
 
 ------------------------------
 
