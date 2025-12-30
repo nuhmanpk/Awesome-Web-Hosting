@@ -1,69 +1,104 @@
-# Free-Web-Hosting
+<div align="center">
 
-[![Awesome](https://awesome.re/badge-flat.svg)](https://github.com/nuhmanpk)
-![GitHub stars](https://img.shields.io/github/stars/nuhmanpk/Awesome-Web-Hosting)
-![GitHub forks](https://img.shields.io/github/forks/nuhmanpk/Awesome-Web-Hosting)
-![GitHub contributors](https://img.shields.io/github/contributors/nuhmanpk/Awesome-Web-Hosting)
-![GitHub last commit](https://img.shields.io/github/last-commit/nuhmanpk/Awesome-Web-Hosting)
+# 🌟 Free Web Hosting Gems 2026
+
+![Socialify Banner](https://socialify.git.ci/nuhmanpk/Awesome-Web-Hosting/image?font=Source+Code+Pro&theme=Dark&stargazers=1&name=1&description=1&custom_description=Unlock+free+hosting+for+your+projects%3A+static%2C+full-stack%2C+and+more.)
+
 [![Visits](https://api.visitorbadge.io/api/visitors?path=[https://github.com/nuhmanpk/awesome-web-hosting](https://github.com/nuhmanpk/portfolio)&countColor=%23007EC6&label=Visits&style=flat-square&token=YOUR_API_TOKEN)](https://github.com/nuhmanpk/awesome-web-hosting)
+[![MIT License](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square&logo=mit)](https://opensource.org/licenses/MIT)
+[![Stars](https://img.shields.io/github/stars/nuhmanpk/Awesome-Web-Hosting?style=flat-square&logo=github)](https://github.com/nuhmanpk/Awesome-Web-Hosting/stargazers)
+[![Forks](https://img.shields.io/github/forks/nuhmanpk/Awesome-Web-Hosting?style=flat-square&logo=github)](https://github.com/nuhmanpk/Awesome-Web-Hosting/network/members)
+[![Contributors](https://img.shields.io/github/contributors/nuhmanpk/Awesome-Web-Hosting?style=flat-square&logo=github)](https://github.com/nuhmanpk/Awesome-Web-Hosting/graphs/contributors)
 
--------------------------------
+</div>
 
-| No. | Hosting Service | Description |
-|-----|-----------------|-------------|
-| 1 | [Netlify](https://www.netlify.com/) | Automate modern web projects, dynamic functionalities. |
-| 2 | [Vercel](https://vercel.com/) | Platform for frontend developers, zero-configuration support. |
-| 3 | [Cloudflare Pages](https://pages.cloudflare.com/) | JAMstack platform, developer-focused with advanced collaboration. |
-| 4 | [Always Data](https://www.alwaysdata.com/) | 100 MB free web hosting, support for various languages. |
-| 5 | [Award Space](https://www.awardspace.com/) | Free web hosting with PHP, MySQL, and more. |
-| 6 | [Bubble](https://bubble.io/) | Visual programming for web and mobile apps without code. |
-| 7 | [Deploy Now](https://deploynow.space/) | Deploy up to 3 web projects from GitHub repository for free. |
-| 8 | [Digital Ocean](https://www.digitalocean.com/pricing) | Build and deploy 3 static sites for free on the App Platform Starter tier. |
-| 9 | [Drive tO Web](https://drv.tw/) | Host directly to the web from Google Drive & OneDrive, static sites only. |
-| 10 | [Fenix Web Server](https://preview.fenixwebserver.com/) | Developer desktop app for hosting sites locally and sharing them publicly. |
-| 11 | [Free Hosting](https://freehostingnoads.net/) | Free hosting with PHP, Perl, CGI, MySQL, FTP, and more. |
-| 12 | [Freehostia](https://www.freehostia.com/) | Free hosting services with an industry-best Control Panel & 1-click installation of 50+ free apps. |
-| 13 | [Hostman](https://hostman.com/) | Deploy up to 3 static sites from your GitHub repository for free. |
-| 14 | [Neocities](https://neocities.org/) | Static hosting with 1 GB free storage and 200 GB bandwidth. |
-| 15 | [Pantheon](https://pantheon.io/) | Drupal and WordPress hosting, automated DevOps, and scalable infrastructure. |
-| 16 | [Read The Docs](https://readthedocs.org/) | Free documentation hosting with versioning, PDF generation, and more. |
-| 17 | [Render](https://render.com/) | Unified cloud to build and run apps and sites with free SSL, global CDN, and private networks. |
-| 18 | [Sourceforge](https://sourceforge.net/) | Platform to find, create, and publish open-source software for free. |
-| 19 | [StormKit](https://stormkit.io/) | Full-featured, self-hostable Vercel/Netlify alternative. |
-| 20 | [Surge](https://surge.sh/) | Static web publishing for front-end developers with unlimited sites and custom domain support. |
-| 21 | [Tilda](https://tilda.cc/) | Site with limited pages, storage, and features. |
-| 22 | [Txti](https://txti.es/) | Create web pages quickly with markdown. |
-| 23 | [Versoly](https://versoly.com/) | SaaS focused website builder with unlimited websites and various features. |
-| 24 | [Qoddi](https://qoddi.com/) | PaaS service similar to Heroku with a developer-centric approach. |
-| 25 | [Freeflarum](https://freeflarum.com/) | Community-powered free Flarum hosting for up to 250 users. |
-| 26 | [Fleek](https://fleek.co/) | Build modern sites and apps on the Open Web and its protocols seamlessly free for unlimited websites. |
-| 27 | [Github Pages](https://pages.github.com/) | Websites for you and your projects, hosted directly from your GitHub repository. |
-| 28 | [GitLab Pages](https://docs.gitlab.com/ee/user/project/pages/) | Websites for your GitLab projects, served from the GitLab repository. |
-| 29 | [Heroku](https://www.heroku.com/) | Cloud platform as a service supporting several programming languages. |
-| 30 | [InfinityFree](https://infinityfree.net/) | Free hosting with 5GB disk space and unlimited bandwidth. ||
-| 31 | [Google Cloud Platform](https://cloud.google.com/) | Cloud computing services by Google, including hosting solutions. |
-| 32 | [Microsoft Azure](https://azure.microsoft.com/) | Cloud computing services by Microsoft, including hosting solutions. |
-| 33 | [Oracle Cloud](https://www.oracle.com/cloud/) | Cloud computing services by Oracle, including hosting solutions. |
-| 34 | [Buddy](https://buddy.works/) | CI/CD platform for web developers to build, test, and deploy code. |
-| 35 | [Firebase](https://firebase.google.com/) | App development platform with hosting, real-time database, and more. |
-| 36 | [Infinity](https://startinfinity.com/) | Project management platform with a focus on organization and collaboration. |
-| 37 | [LinkWave Connect](https://en.linkwaveconnect.com.br/open-source) | Static and Dynamic free hosting for open source projects. |
-| 38 | [ProFreeHost](https://profreehost.com/) | Free hosting with 5GB of disk, unlimited bandwidth, and more. Support dynamic and static pages. |
-| 40 | [sevalla](https://sevalla.com/) | Deploy your app before your coffee gets cold, get $50 free credit |
-| 41 | [serv00](www.serv00.com) | 3 GB of free web hosting with daily backups (7 days). Support: Crontab jobs, SSH access, repositories (GIT, SVN, and Mercurial), support: MySQL, PostgreSQL, MongoDB, PHP, Node.js, Python, Ruby, Java, Perl, TCL/TK, Lua, Erlang, Rust, Pascal, C, C++, D, R, and many more. |
-| 42 | [Rollout](https://rollout.run) | Super simple, CLI-first static site hosting backed by Cloudflare's global CDN |
-| x | Missing Something ? | [Add it here](https://github.com/nuhmanpk/Awesome-Web-Hosting/fork) |
+---
 
-------------------------------
+## 🌐 Static Site Hosting
 
-## 💌 Promote Your Hosting Service
+| # | Service | Description | Free Tier Highlights | Link |
+|---|--------|-------------|----------------------|------|
+| 1 | Netlify | Automate modern web projects. | Unlimited sites, 100 GB/mo bandwidth. | https://www.netlify.com |
+| 2 | Vercel | Frontend-first deploys. | Unlimited sites, 100 GB/mo bandwidth. | https://vercel.com |
+| 3 | Cloudflare Pages | JAMstack with edge. | Unlimited sites, unlimited bandwidth. | https://pages.cloudflare.com |
+| 4 | Deploy Now | GitHub-powered deploys. | 3 projects, custom domains. | https://deploynow.space |
+| 5 | DigitalOcean App Platform | Static & apps. | 3 sites, 1 GB transfer. | https://www.digitalocean.com |
+| 6 | Drive to Web | Drive-based hosting. | Unlimited sites. | https://drv.tw |
+| 7 | Hostman | Git-based hosting. | 3 static sites. | https://hostman.com |
+| 8 | Neocities | Retro static hosting. | 1 GB storage. | https://neocities.org |
+| 9 | Read the Docs | Docs hosting. | Unlimited projects. | https://readthedocs.org |
+|10 | Surge | CLI static deploy. | Unlimited sites. | https://surge.sh |
+|11 | Tilda | Block builder. | 1 site, 50 pages. | https://tilda.cc |
+|12 | Txti | Markdown pages. | Unlimited pages. | https://txti.es |
+|13 | Versoly | SaaS site builder. | Unlimited sites (no domain). | https://versoly.com |
+|14 | GitHub Pages | Repo websites. | Unlimited sites. | https://pages.github.com |
+|15 | GitLab Pages | CI-based hosting. | Unlimited projects. | https://gitlab.com |
+|16 | Kinsta Static Hosting | Premium static CDN. | 100 sites. | https://kinsta.com |
+|17 | PandaStack | Static + containers. | 1 site free. | https://www.pandastack.io |
+|18 | Telegra.ph | Instant Markdown pages. | Unlimited posts. | https://telegra.ph |
+|19 | Codeberg Pages | Gitea hosting. | Unlimited repos. | https://codeberg.org |
+|20 | Framagit Pages | OSS Git hosting. | Unlimited projects. | https://framagit.org |
+|21 | Pagekite | Local tunnel hosting. | 1 site. | https://pagekite.net |
 
-Got a great free hosting service or package you'd like to promote?  
-Reach out to me directly — let's collaborate and feature it here!
+---
 
-📧 **Contact:** [here](mailto:nuhmanpk7@gmail.com)
+## 🔧 Full-Stack Platforms
 
--------------------------------
+| # | Service | Description | Free Tier Highlights | Link |
+|---|--------|-------------|----------------------|------|
+| 1 | AlwaysData | Multi-language hosting. | 1 GB storage. | https://www.alwaysdata.com |
+| 2 | AwardSpace | PHP/MySQL hosting. | 1 GB storage. | https://www.awardspace.com |
+| 3 | Bubble | No-code app builder. | Unlimited apps. | https://bubble.io |
+| 4 | Fenix Web Server | Local-to-public. | Unlimited hosts. | https://fenixwebserver.com |
+| 5 | FreeHostingNoAds | PHP hosting. | Unlimited bandwidth. | https://freehostingnoads.net |
+| 6 | Freehostia | cPanel hosting. | 250 MB storage. | https://freehostia.com |
+| 7 | Pantheon | WP/Drupal PaaS. | Dev sites free. | https://pantheon.io |
+| 8 | Render | App & DB hosting. | 750 hrs/mo. | https://render.com |
+| 9 | SourceForge | OSS hosting. | Unlimited projects. | https://sourceforge.net |
+|10 | StormKit | App deploy platform. | Unlimited sites. | https://stormkit.io |
+|11 | Qoddi | Heroku-like PaaS. | 1 app free. | https://qoddi.com |
+|12 | FreeFlarum | Forum hosting. | 250 users. | https://freeflarum.com |
+|13 | Fleek | Open-web hosting. | Unlimited sites. | https://fleek.co |
+|14 | Heroku | PaaS hosting. | Eco dynos. | https://heroku.com |
+|15 | InfinityFree | PHP/MySQL hosting. | 5 GB disk. | https://infinityfree.net |
+|16 | Firebase | Hosting + DB. | 10 GB transfer. | https://firebase.google.com |
+|17 | HelioHost | Non-profit hosting. | 1 GB storage. | https://heliohost.org |
 
+---
 
-Made with ❤️ [Nuhman Pk](https://github.com/nuhmanpk) 🚀
+## ⚡ Serverless & Edge
+
+| # | Service | Description | Free Tier Highlights | Link |
+|---|--------|-------------|----------------------|------|
+| 1 | Firebase Functions | Serverless backend. | Free invocations. | https://firebase.google.com |
+| 2 | Cloudflare Workers | Edge compute. | 100k req/day. | https://workers.cloudflare.com |
+| 3 | AWS Lambda | Serverless compute. | 1M req/month. | https://aws.amazon.com/lambda |
+
+---
+
+## ☁️ VPS & Cloud Infrastructure
+
+| # | Service | Description | Free Tier Highlights | Link |
+|---|--------|-------------|----------------------|------|
+| 1 | Google Cloud | Compute Engine. | e2-micro always free. | https://cloud.google.com |
+| 2 | Microsoft Azure | App Service & VM. | 12-month free. | https://azure.microsoft.com |
+| 3 | Oracle Cloud | Always Free VMs. | 4 ARM instances. | https://oracle.com/cloud |
+| 4 | AWS Lightsail | VPS instances. | 750 hrs/mo. | https://aws.amazon.com/lightsail |
+| 5 | Vultr | Cloud compute. | $100 credit. | https://vultr.com |
+| 6 | Alibaba Cloud | ECS free tier. | 1-year free. | https://alibabacloud.com |
+| 7 | Linode (Akamai) | Shared CPU VPS. | $100 credit. | https://linode.com |
+
+---
+
+## 🎨 No-Code & Low-Code Builders
+
+| # | Service | Description | Free Tier Highlights | Link |
+|---|--------|-------------|----------------------|------|
+| 1 | Bubble | No-code builder. | Unlimited apps. | https://bubble.io |
+| 2 | Wix | Drag-drop builder. | 500 MB storage. | https://wix.com |
+| 3 | Tilda | Block-based builder. | 1 site. | https://tilda.cc |
+| 4 | Versoly | SaaS site builder. | Unlimited sites. | https://versoly.com |
+
+---
+
+Made with 🔥 by @nuhmanpk
