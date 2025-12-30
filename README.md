@@ -101,4 +101,36 @@
 
 ---
 
-Made with 🔥 by @nuhmanpk
+---
+
+## 🤝 Promote or Feature Your Service
+
+Want to **promote your hosting platform**, **update an existing listing**, or **feature a new free tier** in this repository?
+
+I actively review and curate services to keep this list accurate, valuable, and developer-friendly.
+
+### What you can reach out for
+- 🚀 Feature a new free hosting / cloud / PaaS service  
+- 🔄 Update limits, pricing, or availability of an existing listing  
+- 🧩 Correct inaccuracies or outdated information  
+- 🤝 Partnerships, sponsorships, or collaborations  
+
+
+> Transparency matters — featured services must offer a **genuine free tier** with clear limits.  
+> Paid-only, affiliate-only, or misleading offerings will not be accepted.
+
+<div align="left">
+
+[![Email](https://img.shields.io/badge/Contact-Email-blue?style=flat-square&logo=gmail&logoColor=white)](mailto:nuhmanpk7@gmail.com)
+[![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-brightgreen?style=flat-square&logo=github)](https://github.com/nuhmanpk/Awesome-Web-Hosting/pulls)
+[![Open Source](https://img.shields.io/badge/Open%20Source-Friendly-6f42c1?style=flat-square&logo=open-source-initiative)](https://opensource.org/)
+[![Community Driven](https://img.shields.io/badge/Community-Driven-orange?style=flat-square&logo=people)](https://github.com/nuhmanpk/Awesome-Web-Hosting)
+
+
+</div>
+
+---
+
+
+
+Made with 🔥 by [@nuhmanpk](https::github.com/nuhmanpk)
