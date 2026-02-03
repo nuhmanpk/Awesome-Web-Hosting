@@ -38,7 +38,8 @@
 |18 | Telegra.ph | Instant Markdown pages. | Unlimited posts. | https://telegra.ph |
 |19 | Codeberg Pages | Gitea hosting. | Unlimited repos. | https://codeberg.org |
 |20 | Framagit Pages | OSS Git hosting. | Unlimited projects. | https://framagit.org |
-|21 | Pagekite | Local tunnel hosting. | 1 site. | https://pagekite.net |
+|21 | MyVibe | AI-generated web app hosting. | Unlimited vibes, permanent URLs. | https://myvibe.so |
+|22 | Pagekite | Local tunnel hosting. | 1 site. | https://pagekite.net |
 
 ---
 
