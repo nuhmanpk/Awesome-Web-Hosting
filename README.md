@@ -39,6 +39,7 @@
 |19 | Codeberg Pages | Gitea hosting. | Unlimited repos. | https://codeberg.org |
 |20 | Framagit Pages | OSS Git hosting. | Unlimited projects. | https://framagit.org |
 |21 | Pagekite | Local tunnel hosting. | 1 site. | https://pagekite.net |
+|22 | OneClickLive | Paste HTML/JSX, get a live HTTPS URL in 3 seconds. Auto-wraps React without a build step. | No account required for first deploy. | https://oneclicklive.app |
 
 ---
 
