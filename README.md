@@ -40,6 +40,7 @@
 |20 | Framagit Pages | OSS Git hosting. | Unlimited projects. | https://framagit.org |
 |21 | Pagekite | Local tunnel hosting. | 1 site. | https://pagekite.net |
 |22 | OneClickLive | Paste HTML/JSX, get a live HTTPS URL in 3 seconds. Auto-wraps React without a build step. | No account required for first deploy. | https://oneclicklive.app |
+|23 | BrewPage | Instant hosting for HTML, Markdown, JSON, key-value data, files and multi-file static sites. REST API + MCP server (AI/agent-friendly). | Free, no signup, fast. | https://brewpage.app |
 
 ---
 
