@@ -141,4 +141,4 @@ I actively review and curate services to keep this list accurate, valuable, and 
 
 
 
-Made with 🔥 by [@nuhmanpk](https:github.com/nuhmanpk)
+Made with 🔥 by [nuhmanpk](github.com/nuhmanpk)
