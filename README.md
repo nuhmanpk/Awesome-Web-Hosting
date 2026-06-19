@@ -41,6 +41,7 @@
 |21 | Pagekite | Local tunnel hosting. | 1 site. | https://pagekite.net |
 |22 | OneClickLive | Paste HTML/JSX, get a live HTTPS URL in 3 seconds. Auto-wraps React without a build step. | No account required for first deploy. | https://oneclicklive.app |
 |23 | BrewPage | Instant hosting for HTML, Markdown, JSON, key-value data, files and multi-file static sites. REST API + MCP server (AI/agent-friendly). | Free, no signup, fast. | https://brewpage.app |
+|24 | Snapy | Drop a file, an HTML page, or a zipped static site (React/Next export) and get a clean public link. Single files and AI-generated pages too. | No signup, 100 MB/file, links persist by default. | https://snapy.host |
 
 ---
 
