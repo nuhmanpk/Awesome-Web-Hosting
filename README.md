@@ -67,6 +67,7 @@
 |15 | InfinityFree | PHP/MySQL hosting. | 5 GB disk. | https://infinityfree.net |
 |16 | Firebase | Hosting + DB. | 10 GB transfer. | https://firebase.google.com |
 |17 | HelioHost | Non-profit hosting. | 1 GB storage. | https://heliohost.org |
+|18 | Dada Cloud | Git-push PaaS for Next.js, FastAPI, static & Docker, ruble-native billing for RU devs. | 1 app, 1 DB, 1GB, 1 domain. | https://cloud.dada-tuda.ru/?utm_source=awesome_webhosting |
 
 ---
 
