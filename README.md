@@ -63,7 +63,8 @@
 |10 | StormKit | App deploy platform. | Unlimited sites. | https://stormkit.io |
 |11 | Qoddi | Heroku-like PaaS. | 1 app free. | https://qoddi.com |
 |12 | FreeFlarum | Forum hosting. | 250 users. | https://freeflarum.com |
-|13 | Fleek | Open-web hosting. | Unlimited sites. | https://fleek.co |
+|13 | Fleek ||14 | Raven Host | Discord bot & app hosting. | 24/7, 75% CPU / 1 GB / 5 GB, free forever. | https://ravenhost.space |
+ Open-web hosting. | Unlimited sites. | https://fleek.co |
 |14 | Heroku | PaaS hosting. | Eco dynos. | https://heroku.com |
 |15 | InfinityFree | PHP/MySQL hosting. | 5 GB disk. | https://infinityfree.net |
 |16 | Firebase | Hosting + DB. | 10 GB transfer. | https://firebase.google.com |
