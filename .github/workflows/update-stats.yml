@@ -1,4 +1,4 @@
-name: Update Hosting Stats
+name: Update Counts
 
 on:
   push:
