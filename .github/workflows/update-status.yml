@@ -1,0 +1,45 @@
+name: Update Hosting Status
+
+on:
+  pull_request:
+    types:
+      - closed
+    branches:
+      - main
+
+  schedule:
+    - cron: "0 6 1 * *"
+
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-status:
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch' || github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Generate STATUS.md
+        run: |
+          python3 <<'PY'
+          # your existing STATUS.md generation code goes here
+          PY
+
+      - name: Commit STATUS.md
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add STATUS.md
+
+          if git diff --cached --quiet; then
+            echo "STATUS.md is already up to date"
+          else
+            git commit -m "chore: update hosting status"
+            git push
+          fi
