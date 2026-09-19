@@ -71,7 +71,8 @@
 |16 | Firebase | Hosting + DB. | 10 GB transfer. | https://firebase.google.com |
 |17 | HelioHost | Non-profit hosting. | 1 GB storage. | https://heliohost.org |
 |18 | Dada Cloud | Git-push PaaS for Next.js, FastAPI, static & Docker, ruble-native billing for RU devs. | 1 app, 1 DB, 1GB, 1 domain. | https://cloud.dada-tuda.ru/?utm_source=awesome_webhosting |
-|19 | Deplexo | PaaS hosting. | 1 app free. | https://deplexo.com |
+|19 | Peon | Open-source self-hostable Docker PaaS (Vercel/Heroku alternative). | Self-host free (MIT). | https://peon.sh |
+|20 | Deplexo | PaaS hosting. | 1 app free. | https://deplexo.com |
 
 ---
 
