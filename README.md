@@ -77,15 +77,15 @@
 |10 | StormKit | App deploy platform. | Unlimited sites. | https://stormkit.io |
 |11 | Qoddi | Heroku-like PaaS. | 1 app free. | https://qoddi.com |
 |12 | FreeFlarum | Forum hosting. | 250 users. | https://freeflarum.com |
-|13 | Fleek ||14 | Raven Host | Discord bot & app hosting. | 24/7, 75% CPU / 1 GB / 5 GB, free forever. | https://ravenhost.space |
- Open-web hosting. | Unlimited sites. | https://fleek.co |
-|14 | Heroku | PaaS hosting. | Eco dynos. | https://heroku.com |
-|15 | InfinityFree | PHP/MySQL hosting. | 5 GB disk. | https://infinityfree.net |
-|16 | Firebase | Hosting + DB. | 10 GB transfer. | https://firebase.google.com |
-|17 | HelioHost | Non-profit hosting. | 1 GB storage. | https://heliohost.org |
-|18 | Dada Cloud | Git-push PaaS for Next.js, FastAPI, static & Docker, ruble-native billing for RU devs. | 1 app, 1 DB, 1GB, 1 domain. | https://cloud.dada-tuda.ru/?utm_source=awesome_webhosting |
-|19 | Peon | Open-source self-hostable Docker PaaS (Vercel/Heroku alternative). | Self-host free (MIT). | https://peon.sh |
-|20 | Deplexo | PaaS hosting. | 1 app free. | https://deplexo.com |
+|13 | Fleek | Open-web hosting. | Unlimited sites. | https://fleek.co |
+|14 | Raven Host | Discord bot & app hosting. | 24/7, 75% CPU / 1 GB / 5 GB, free forever. | https://ravenhost.space |
+|15 | Heroku | PaaS hosting. | Eco dynos. | https://heroku.com |
+|16 | InfinityFree | PHP/MySQL hosting. | 5 GB disk. | https://infinityfree.net |
+|17 | Firebase | Hosting + DB. | 10 GB transfer. | https://firebase.google.com |
+|18 | HelioHost | Non-profit hosting. | 1 GB storage. | https://heliohost.org |
+|19 | Dada Cloud | Git-push PaaS for Next.js, FastAPI, static & Docker, ruble-native billing for RU devs. | 1 app, 1 DB, 1GB, 1 domain. | https://cloud.dada-tuda.ru/?utm_source=awesome_webhosting |
+|20 | Peon | Open-source self-hostable Docker PaaS (Vercel/Heroku alternative). | Self-host free (MIT). | https://peon.sh |
+|21 | Deplexo | PaaS hosting. | 1 app free. | https://deplexo.com |
 
 ---
 
