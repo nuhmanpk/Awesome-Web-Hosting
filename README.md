@@ -12,6 +12,19 @@
 
 </div>
 
+## 📚 Categories
+
+<!-- CATEGORY_STATS_START -->
+| Category | Services |
+|---|---:|
+| 🌐 Static Site Hosting | ... |
+| 🔧 Full-Stack Platforms | ... |
+| ⚡ Serverless & Edge | ... |
+| ☁️ VPS & Cloud Infrastructure | ... |
+| 🎨 No-Code & Low-Code Builders | ... |
+| **Total** | **...** |
+<!-- CATEGORY_STATS_END -->
+
 ---
 
 ## 🌐 Static Site Hosting
