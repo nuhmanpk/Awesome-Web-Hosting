@@ -12,18 +12,47 @@
 
 </div>
 
+---
+
 ## 📚 Categories
 
 <!-- CATEGORY_STATS_START -->
-| Category | Services |
-|---|---:|
-| [🌐 Static Site Hosting](#static-site-hosting) | 27 |
-| [🔧 Full-Stack Platforms](#full-stack-platforms) | 21 |
-| [⚡ Serverless & Edge](#serverless--edge) | 3 |
-| [☁️ VPS & Cloud Infrastructure](#vps--cloud-infrastructure) | 7 |
-| [🎨 No-Code & Low-Code Builders](#no-code--low-code-builders) | 4 |
-| **Total** | **62** |
+<table width="100%">
+  <thead>
+    <tr>
+      <th>Category</th>
+      <th>Services</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="#-static-site-hosting">🌐 Static Site Hosting</a></td>
+      <td align="right">27</td>
+    </tr>
+    <tr>
+      <td><a href="#-full-stack-platforms">🔧 Full-Stack Platforms</a></td>
+      <td align="right">21</td>
+    </tr>
+    <tr>
+      <td><a href="#-serverless--edge">⚡ Serverless & Edge</a></td>
+      <td align="right">3</td>
+    </tr>
+    <tr>
+      <td><a href="#%EF%B8%8F-vps--cloud-infrastructure">☁️ VPS & Cloud Infrastructure</a></td>
+      <td align="right">7</td>
+    </tr>
+    <tr>
+      <td><a href="#-no-code--low-code-builders">🎨 No-Code & Low-Code Builders</a></td>
+      <td align="right">4</td>
+    </tr>
+    <tr>
+      <th>Total</th>
+      <th align="right">62</th>
+    </tr>
+  </tbody>
+</table>
 <!-- CATEGORY_STATS_END -->
+
 
 
 ---
