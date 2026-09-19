@@ -44,6 +44,7 @@
 |24 | Snapy | Drop a file, an HTML page, or a zipped static site (React/Next export) and get a clean public link. Single files and AI-generated pages too. | No signup, 100 MB/file, links persist by default. | https://snapy.host |
 |25 | Nippy | Drag in files, photos, or a whole folder and get a permanent public link — static sites or any files, no build step. Handy for sharing AI-generated pages and docs. | 1 site, 25 MB storage, no card. | https://nippy.host |
 |26 | host-html | API-first hosting site for static HTML pages, with password protection, analytics and other paid features. | 5 sites, 1 MB storage per site, no card. | https://host-html.com |
+|27 | harvis.dev | Zero-setup static hosting: run npx harvis or drag a folder in and get a live URL in seconds. CLI, drag-and-drop, HTTP API and MCP server for AI agents; built-in form handling. | Free for small sites, no signup for first deploy. | https://harvis.dev |
 
 ---
 
@@ -63,13 +64,15 @@
 |10 | StormKit | App deploy platform. | Unlimited sites. | https://stormkit.io |
 |11 | Qoddi | Heroku-like PaaS. | 1 app free. | https://qoddi.com |
 |12 | FreeFlarum | Forum hosting. | 250 users. | https://freeflarum.com |
-|13 | Fleek | Open-web hosting. | Unlimited sites. | https://fleek.co |
+|13 | Fleek ||14 | Raven Host | Discord bot & app hosting. | 24/7, 75% CPU / 1 GB / 5 GB, free forever. | https://ravenhost.space |
+ Open-web hosting. | Unlimited sites. | https://fleek.co |
 |14 | Heroku | PaaS hosting. | Eco dynos. | https://heroku.com |
 |15 | InfinityFree | PHP/MySQL hosting. | 5 GB disk. | https://infinityfree.net |
 |16 | Firebase | Hosting + DB. | 10 GB transfer. | https://firebase.google.com |
 |17 | HelioHost | Non-profit hosting. | 1 GB storage. | https://heliohost.org |
 |18 | Dada Cloud | Git-push PaaS for Next.js, FastAPI, static & Docker, ruble-native billing for RU devs. | 1 app, 1 DB, 1GB, 1 domain. | https://cloud.dada-tuda.ru/?utm_source=awesome_webhosting |
 |19 | Peon | Open-source self-hostable Docker PaaS (Vercel/Heroku alternative). | Self-host free (MIT). | https://peon.sh |
+|20 | Deplexo | PaaS hosting. | 1 app free. | https://deplexo.com |
 
 ---
 
