@@ -1,0 +1,45 @@
+name: PR Checklist
+
+on:
+  pull_request:
+    types:
+      - opened
+      - edited
+      - synchronize
+
+permissions:
+  pull-requests: write
+
+jobs:
+  checklist:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check PR checklist
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const body = context.payload.pull_request.body || "";
+
+            const checklist = [
+              "I checked that the service is not already listed.",
+              "I verified the official website and free tier.",
+              "I added the service to the correct category.",
+              "I followed the existing table format.",
+              "I used the official service URL.",
+              "I checked the Markdown formatting.",
+              "I reviewed my changes before submitting."
+            ];
+
+            const missing = checklist.filter(item => {
+              const unchecked = new RegExp(`- \\[ \\] ${item.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}`);
+              return unchecked.test(body);
+            });
+
+            if (missing.length > 0) {
+              core.setFailed(
+                `Please complete the PR checklist before merging:\n\n${missing.map(item => `- ${item}`).join("\n")}`
+              );
+            }
+
+            console.log("All PR checklist items are completed.");
