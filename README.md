@@ -14,6 +14,13 @@
 
 ---
 
+> ⚠️ **Important:** Hosting availability and free-tier limits can change at any time.  
+> Before choosing a service, check the latest automated availability results in **[STATUS.md](STATUS.md)** to see which listed services are currently reachable.
+>
+> 🔎 **[View Current Hosting Status →](STATUS.md)**
+
+---
+
 ## 📚 Categories
 
 <!-- CATEGORY_STATS_START -->
@@ -26,8 +33,6 @@
 | [🎨 No-Code & Low-Code Builders](#no-code--low-code-builders) | 4 |
 | **Total** | **62** |
 <!-- CATEGORY_STATS_END -->
-
-
 
 ---
 
