@@ -17,7 +17,7 @@ permissions:
 
 jobs:
   update-status:
-    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch' || github.event.pull_request.merged == true
+    if: github.event_name != 'pull_request' || github.event.pull_request.merged == true
     runs-on: ubuntu-latest
 
     steps:
@@ -27,7 +27,204 @@ jobs:
       - name: Generate STATUS.md
         run: |
           python3 <<'PY'
-          # your existing STATUS.md generation code goes here
+          import re
+          import subprocess
+          from pathlib import Path
+          from datetime import datetime, timezone
+
+          readme_path = Path("README.md")
+          status_path = Path("STATUS.md")
+
+          readme = readme_path.read_text(encoding="utf-8")
+
+          services = []
+
+          sections = re.split(
+              r"(?=^## )",
+              readme,
+              flags=re.MULTILINE
+          )
+
+          ignored_sections = {
+              "📚 Categories",
+              "🤝 Promote or Feature Your Service"
+          }
+
+          for section in sections:
+              heading = re.match(r"^## (.+)", section)
+
+              if not heading:
+                  continue
+
+              category = heading.group(1).strip()
+
+              if category in ignored_sections:
+                  continue
+
+              rows = re.findall(
+                  r"^\|\s*(\d+)\s*\|\s*([^|]+?)\s*\|\s*([^|]+?)\s*\|\s*([^|]+?)\s*\|\s*(https?://[^|\s]+)\s*\|",
+                  section,
+                  flags=re.MULTILINE
+              )
+
+              for number, service, description, free_tier, url in rows:
+                  services.append({
+                      "category": category,
+                      "number": int(number),
+                      "service": service.strip(),
+                      "url": url.strip()
+                  })
+
+          print(f"Found {len(services)} services in README.md")
+
+          def check_url(url):
+              try:
+                  result = subprocess.run(
+                      [
+                          "curl",
+                          "-L",
+                          "-s",
+                          "-o",
+                          "/dev/null",
+                          "-w",
+                          "%{http_code}|%{url_effective}",
+                          "--connect-timeout",
+                          "10",
+                          "--max-time",
+                          "30",
+                          "-A",
+                          "Mozilla/5.0",
+                          url
+                      ],
+                      capture_output=True,
+                      text=True
+                  )
+
+                  output = result.stdout.strip()
+
+                  if "|" not in output:
+                      return "ERROR", "N/A", url
+
+                  status_code, final_url = output.split("|", 1)
+
+                  if status_code.startswith("2"):
+                      return "ONLINE", status_code, final_url
+
+                  if status_code.startswith("3"):
+                      return "REDIRECT", status_code, final_url
+
+                  if status_code.startswith("4"):
+                      return "OFFLINE", status_code, final_url
+
+                  if status_code.startswith("5"):
+                      return "ERROR", status_code, final_url
+
+                  return "UNKNOWN", status_code, final_url
+
+              except subprocess.TimeoutExpired:
+                  return "TIMEOUT", "N/A", url
+
+              except Exception:
+                  return "ERROR", "N/A", url
+
+          checked_at = datetime.now(timezone.utc).strftime(
+              "%Y-%m-%d %H:%M UTC"
+          )
+
+          results = []
+
+          for index, service in enumerate(services, 1):
+              print(
+                  f"[{index}/{len(services)}] "
+                  f"Checking {service['service']}..."
+              )
+
+              status, code, final_url = check_url(service["url"])
+
+              results.append({
+                  **service,
+                  "status": status,
+                  "code": code,
+                  "final_url": final_url
+              })
+
+          total = len(results)
+          online = sum(r["status"] == "ONLINE" for r in results)
+          redirects = sum(r["status"] == "REDIRECT" for r in results)
+          offline = sum(r["status"] == "OFFLINE" for r in results)
+          errors = sum(
+              r["status"] in ["ERROR", "TIMEOUT"]
+              for r in results
+          )
+
+          status_icons = {
+              "ONLINE": "🟢 Online",
+              "REDIRECT": "🟡 Redirect",
+              "OFFLINE": "🔴 Offline",
+              "TIMEOUT": "⚠️ Timeout",
+              "ERROR": "⚠️ Error",
+              "UNKNOWN": "❔ Unknown"
+          }
+
+          lines = [
+              "# 🌐 Hosting Status",
+              "",
+              "Automatically generated from the hosting services listed in `README.md`.",
+              "",
+              f"**Last checked:** {checked_at}",
+              "",
+              "## 📊 Summary",
+              "",
+              "| Metric | Count |",
+              "|---|---:|",
+              f"| Total Services | {total} |",
+              f"| 🟢 Online | {online} |",
+              f"| 🟡 Redirect | {redirects} |",
+              f"| 🔴 Offline | {offline} |",
+              f"| ⚠️ Error / Timeout | {errors} |",
+              "",
+              "## 🔎 Service Status",
+              "",
+              "| Category | Service | Status | HTTP | Link |",
+              "|---|---|---|---:|---|"
+          ]
+
+          for result in results:
+              status = status_icons.get(
+                  result["status"],
+                  result["status"]
+              )
+
+              lines.append(
+                  f"| {result['category']} | "
+                  f"[{result['service']}]({result['url']}) | "
+                  f"{status} | "
+                  f"{result['code']} | "
+                  f"{result['url']} |"
+              )
+
+          lines.extend([
+              "",
+              "---",
+              "",
+              "### ℹ️ Status Definitions",
+              "",
+              "- 🟢 **Online** — The service returned a successful HTTP response.",
+              "- 🟡 **Redirect** — The service redirected to another URL.",
+              "- 🔴 **Offline** — The service returned a 4xx response.",
+              "- ⚠️ **Error / Timeout** — The service could not be reached reliably.",
+              "",
+              "> Status checks are automated and may occasionally produce false positives due to temporary network issues, rate limits, maintenance, or bot protection.",
+              ""
+          ])
+
+          status_path.write_text(
+              "\n".join(lines),
+              encoding="utf-8"
+          )
+
+          print(f"Generated {status_path}")
+          print(f"Checked {total} services")
           PY
 
       - name: Commit STATUS.md
@@ -38,7 +235,7 @@ jobs:
           git add STATUS.md
 
           if git diff --cached --quiet; then
-            echo "STATUS.md is already up to date"
+            echo "STATUS.md is already up to date."
           else
             git commit -m "chore: update hosting status"
             git push
