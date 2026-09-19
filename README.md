@@ -17,12 +17,12 @@
 <!-- CATEGORY_STATS_START -->
 | Category | Services |
 |---|---:|
-| [🌐 Static Site Hosting](#-static-site-hosting) | ... |
-| [🔧 Full-Stack Platforms](#-full-stack-platforms) | ... |
-| [⚡ Serverless & Edge](#-serverless--edge) | ... |
-| [☁️ VPS & Cloud Infrastructure](#️-vps--cloud-infrastructure) | ... |
-| [🎨 No-Code & Low-Code Builders](#-no-code--low-code-builders) | ... |
-| **Total** | **...** |
+| [🌐 Static Site Hosting](#static-site-hosting) | 27 |
+| [🔧 Full-Stack Platforms](#full-stack-platforms) | 21 |
+| [⚡ Serverless & Edge](#serverless--edge) | 3 |
+| [☁️ VPS & Cloud Infrastructure](#vps--cloud-infrastructure) | 7 |
+| [🎨 No-Code & Low-Code Builders](#no-code--low-code-builders) | 4 |
+| **Total** | **62** |
 <!-- CATEGORY_STATS_END -->
 
 
