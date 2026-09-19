@@ -2,13 +2,17 @@
 
 # 🌟 Free Web Hosting Gems 2026
 
+A curated collection of free web hosting platforms for static sites, full-stack apps, serverless projects, VPS/cloud infrastructure, and no-code builders.
 ![Socialify Banner](https://socialify.git.ci/nuhmanpk/Awesome-Web-Hosting/image?font=Source+Code+Pro&theme=Dark&stargazers=1&name=1&description=1&custom_description=Unlock+free+hosting+for+your+projects%3A+static%2C+full-stack%2C+and+more.)
 
 [![Visits](https://api.visitorbadge.io/api/visitors?path=[https://github.com/nuhmanpk/awesome-web-hosting](https://github.com/nuhmanpk/portfolio)&countColor=%23007EC6&label=Visits&style=flat-square&token=YOUR_API_TOKEN)](https://github.com/nuhmanpk/awesome-web-hosting)
 [![MIT License](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square&logo=mit)](https://opensource.org/licenses/MIT)
-[![Stars](https://img.shields.io/github/stars/nuhmanpk/Awesome-Web-Hosting?style=flat-square&logo=github)](https://github.com/nuhmanpk/Awesome-Web-Hosting/stargazers)
-[![Forks](https://img.shields.io/github/forks/nuhmanpk/Awesome-Web-Hosting?style=flat-square&logo=github)](https://github.com/nuhmanpk/Awesome-Web-Hosting/network/members)
-[![Contributors](https://img.shields.io/github/contributors/nuhmanpk/Awesome-Web-Hosting?style=flat-square&logo=github)](https://github.com/nuhmanpk/Awesome-Web-Hosting/graphs/contributors)
+[![Stars](https://img.shields.io/github/stars/nuhmanpk/Awesome-Web-Hosting?style=flat-square&logo=github&label=Stars&color=gold)](https://github.com/nuhmanpk/Awesome-Web-Hosting/stargazers)
+[![Forks](https://img.shields.io/github/forks/nuhmanpk/Awesome-Web-Hosting?style=flat-square&logo=github&label=Forks&color=orange)](https://github.com/nuhmanpk/Awesome-Web-Hosting/network/members)
+[![Contributors](https://img.shields.io/github/contributors/nuhmanpk/Awesome-Web-Hosting?style=flat-square&logo=github&label=Contributors&color=9b59b6)](https://github.com/nuhmanpk/Awesome-Web-Hosting/graphs/contributors)
+[![Update Counts](https://img.shields.io/github/actions/workflow/status/nuhmanpk/Awesome-Web-Hosting/update-stats.yml?style=flat-square&label=Update%20Counts&color=2ea44f)](https://github.com/nuhmanpk/Awesome-Web-Hosting/actions/workflows/update-stats.yml)
+[![Pages Build Deployment](https://img.shields.io/github/actions/workflow/status/nuhmanpk/Awesome-Web-Hosting/pages/pages-build-deployment?style=flat-square&label=Pages%20Build%20Deployment&color=6f42c1)](https://github.com/nuhmanpk/Awesome-Web-Hosting/actions/workflows/pages/pages-build-deployment)
+[![Update Hosting Status](https://img.shields.io/github/actions/workflow/status/nuhmanpk/Awesome-Web-Hosting/update-status.yml?style=flat-square&label=Update%20Hosting%20Status&color=00b894)](https://github.com/nuhmanpk/Awesome-Web-Hosting/actions/workflows/update-status.yml)
 
 </div>
 
@@ -145,17 +149,35 @@
 
 Want to **promote your hosting platform**, **update an existing listing**, or **feature a new free tier** in this repository?
 
-I actively review and curate services to keep this list accurate, valuable, and developer-friendly.
+<div align="center">
 
-### What you can reach out for
-- 🚀 Feature a new free hosting / cloud / PaaS service  
-- 🔄 Update limits, pricing, or availability of an existing listing  
-- 🧩 Correct inaccuracies or outdated information  
-- 🤝 Partnerships, sponsorships, or collaborations  
+### 🚀 Put Your Hosting Platform in Front of Developers
 
+[![Visits](https://api.visitorbadge.io/api/visitors?path=[https://github.com/nuhmanpk/awesome-web-hosting](https://github.com/nuhmanpk/portfolio)&countColor=%23007EC6&label=Repository%20Visits&style=flat-square&token=YOUR_API_TOKEN)](https://github.com/nuhmanpk/Awesome-Web-Hosting)
 
-> Transparency matters — featured services must offer a **genuine free tier** with clear limits.  
-> Paid-only, affiliate-only, or misleading offerings will not be accepted.
+**👀 See the numbers yourself — this repository is actively visited by developers looking for free hosting.**
+
+Get your platform discovered by developers searching for their next hosting solution.
+
+</div>
+
+### What you can request
+
+- 🚀 **Feature a new free hosting service**
+- 📈 **Update your existing listing and free-tier limits**
+- 🔄 **Correct outdated or inaccurate information**
+- ⭐ **Get your platform in front of developers exploring hosting options**
+- 🤝 **Discuss partnerships, sponsorships, or collaborations**
+
+> **Have a hosting platform? Get it listed and let developers discover it.**
+
+I actively review submissions to keep this list useful, accurate, and developer-friendly.
+
+### 📬 Want to be featured?
+
+Reach out through **[email](mailto:nuhmanpk7@gmail.com)** or submit a **[Pull Request](https://github.com/nuhmanpk/Awesome-Web-Hosting/pulls)**.
+
+> Transparency matters — featured services must offer a **genuine free tier** with clear limits. Paid-only, affiliate-only, or misleading offerings will not be accepted.
 
 <div align="left">
 
@@ -171,4 +193,4 @@ I actively review and curate services to keep this list accurate, valuable, and 
 
 
 
-Made with 🔥 by [nuhmanpk](github.com/nuhmanpk)
+Made with ❤️ by [nuhmanpk](github.com/nuhmanpk)
