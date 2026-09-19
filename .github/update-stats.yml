@@ -1,0 +1,107 @@
+name: Update Hosting Stats
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - README.md
+
+permissions:
+  contents: write
+
+jobs:
+  update-stats:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Update category counts
+        run: |
+          python3 <<'PY'
+          import re
+          from pathlib import Path
+
+          readme = Path("README.md")
+          content = readme.read_text()
+
+          stats_start = "<!-- CATEGORY_STATS_START -->"
+          stats_end = "<!-- CATEGORY_STATS_END -->"
+
+          sections = re.split(r"(?=^## )", content, flags=re.MULTILINE)
+
+          rows = []
+
+          for section in sections:
+              match = re.match(r"^## (.+)", section)
+              if not match:
+                  continue
+
+              title = match.group(1).strip()
+
+              if title == "📊 Hosting Categories":
+                  continue
+
+              if title == "🤝 Promote or Feature Your Service":
+                  continue
+
+              table_match = re.search(
+                  r"\|\s*#\s*\|\s*Service\s*\|.*?\n\|[-| :]+\|.*?\n((?:\|.*\n?)*)",
+                  section,
+                  flags=re.IGNORECASE
+              )
+
+              if not table_match:
+                  continue
+
+              table_rows = [
+                  line for line in table_match.group(1).splitlines()
+                  if re.match(r"\|\s*\d+\s*\|", line)
+              ]
+
+              if table_rows:
+                  rows.append((title, len(table_rows)))
+
+          total = sum(count for _, count in rows)
+
+          table = [
+              stats_start,
+              "| Category | Services |",
+              "|---|---:|"
+          ]
+
+          for title, count in rows:
+              table.append(f"| [{title}](#{re.sub(r'[^a-z0-9 -]', '', title.lower()).strip().replace(' ', '-')}) | {count} |")
+
+          table.append(f"| **Total** | **{total}** |")
+          table.append(stats_end)
+
+          new_stats = "\n".join(table)
+
+          pattern = re.escape(stats_start) + r".*?" + re.escape(stats_end)
+
+          updated = re.sub(
+              pattern,
+              new_stats,
+              content,
+              flags=re.DOTALL
+          )
+
+          readme.write_text(updated)
+          PY
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add README.md
+
+          if git diff --cached --quiet; then
+            echo "No changes"
+          else
+            git commit -m "chore: update hosting statistics"
+            git push
+          fi
