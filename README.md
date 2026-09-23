@@ -134,6 +134,7 @@ A curated collection of free web hosting platforms for static sites, full-stack 
 | 2 | Wix | Drag-drop builder. | 500 MB storage. | https://wix.com |
 | 3 | Tilda | Block-based builder. | 1 site. | https://tilda.cc |
 | 4 | Versoly | SaaS site builder. | Unlimited sites. | https://versoly.com |
+| 5 | Figment.so | Figma-to-website publishing plugin. | Free figment.so subdomain hosting with a badge; no card required. Custom domains and HTML/CSS export are paid. | https://figment.so/ |
 
 ---
 
