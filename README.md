@@ -31,11 +31,11 @@ A curated collection of free web hosting platforms for static sites, full-stack 
 | Category | Services |
 |---|---:|
 | [🌐 Static Site Hosting](#static-site-hosting) | 27 |
-| [🔧 Full-Stack Platforms](#full-stack-platforms) | 21 |
+| [🔧 Full-Stack Platforms](#full-stack-platforms) | 22 |
 | [⚡ Serverless & Edge](#serverless--edge) | 3 |
 | [☁️ VPS & Cloud Infrastructure](#vps--cloud-infrastructure) | 7 |
 | [🎨 No-Code & Low-Code Builders](#no-code--low-code-builders) | 4 |
-| **Total** | **62** |
+| **Total** | **63** |
 <!-- CATEGORY_STATS_END -->
 
 ---
