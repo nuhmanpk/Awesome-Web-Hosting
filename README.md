@@ -99,6 +99,7 @@ A curated collection of free web hosting platforms for static sites, full-stack 
 |19 | Dada Cloud | Git-push PaaS for Next.js, FastAPI, static & Docker, ruble-native billing for RU devs. | 1 app, 1 DB, 1GB, 1 domain. | https://cloud.dada-tuda.ru/?utm_source=awesome_webhosting |
 |20 | Peon | Open-source self-hostable Docker PaaS (Vercel/Heroku alternative). | Self-host free (MIT). | https://peon.sh |
 |21 | Deplexo | PaaS hosting. | 1 app free. | https://deplexo.com |
+|22 | SnapDeploy | Docker container hosting on AWS. | 4 containers, 100 hrs/mo, no card. | https://snapdeploy.dev |
 
 ---
 
