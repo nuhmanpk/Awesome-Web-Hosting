@@ -34,8 +34,8 @@ A curated collection of free web hosting platforms for static sites, full-stack 
 | [🔧 Full-Stack Platforms](#full-stack-platforms) | 22 |
 | [⚡ Serverless & Edge](#serverless--edge) | 3 |
 | [☁️ VPS & Cloud Infrastructure](#vps--cloud-infrastructure) | 7 |
-| [🎨 No-Code & Low-Code Builders](#no-code--low-code-builders) | 4 |
-| **Total** | **63** |
+| [🎨 No-Code & Low-Code Builders](#no-code--low-code-builders) | 5 |
+| **Total** | **64** |
 <!-- CATEGORY_STATS_END -->
 
 ---
