@@ -2,14 +2,14 @@
 
 Automatically generated from the hosting services listed in `README.md`.
 
-**Last checked:** 2026-09-19 09:28 UTC
+**Last checked:** 2026-10-01 12:23 UTC
 
 ## 📊 Summary
 
 | Metric | Count |
 |---|---:|
-| Total Services | 62 |
-| 🟢 Online | 55 |
+| Total Services | 64 |
+| 🟢 Online | 57 |
 | 🟡 Redirect | 0 |
 | 🔴 Offline | 4 |
 | ⚠️ Error / Timeout | 0 |
@@ -66,6 +66,7 @@ Automatically generated from the hosting services listed in `README.md`.
 | 🔧 Full-Stack Platforms | [Dada Cloud](https://cloud.dada-tuda.ru/?utm_source=awesome_webhosting) | 🟢 Online | 200 | https://cloud.dada-tuda.ru/?utm_source=awesome_webhosting |
 | 🔧 Full-Stack Platforms | [Peon](https://peon.sh) | 🟢 Online | 200 | https://peon.sh |
 | 🔧 Full-Stack Platforms | [Deplexo](https://deplexo.com) | 🟢 Online | 200 | https://deplexo.com |
+| 🔧 Full-Stack Platforms | [SnapDeploy](https://snapdeploy.dev) | 🟢 Online | 200 | https://snapdeploy.dev |
 | ⚡ Serverless & Edge | [Firebase Functions](https://firebase.google.com) | 🟢 Online | 200 | https://firebase.google.com |
 | ⚡ Serverless & Edge | [Cloudflare Workers](https://workers.cloudflare.com) | 🟢 Online | 200 | https://workers.cloudflare.com |
 | ⚡ Serverless & Edge | [AWS Lambda](https://aws.amazon.com/lambda) | 🟢 Online | 200 | https://aws.amazon.com/lambda |
@@ -80,6 +81,7 @@ Automatically generated from the hosting services listed in `README.md`.
 | 🎨 No-Code & Low-Code Builders | [Wix](https://wix.com) | 🟢 Online | 200 | https://wix.com |
 | 🎨 No-Code & Low-Code Builders | [Tilda](https://tilda.cc) | 🟢 Online | 200 | https://tilda.cc |
 | 🎨 No-Code & Low-Code Builders | [Versoly](https://versoly.com) | 🟢 Online | 200 | https://versoly.com |
+| 🎨 No-Code & Low-Code Builders | [Figment.so](https://figment.so/) | 🟢 Online | 200 | https://figment.so/ |
 
 ---
 
