@@ -71,6 +71,7 @@ A curated collection of free web hosting platforms for static sites, full-stack 
 |25 | Nippy | Drag in files, photos, or a whole folder and get a permanent public link — static sites or any files, no build step. Handy for sharing AI-generated pages and docs. | 1 site, 25 MB storage, no card. | https://nippy.host |
 |26 | host-html | API-first hosting site for static HTML pages, with password protection, analytics and other paid features. | 5 sites, 1 MB storage per site, no card. | https://host-html.com |
 |27 | harvis.dev | Zero-setup static hosting: run npx harvis or drag a folder in and get a live URL in seconds. CLI, drag-and-drop, HTTP API and MCP server for AI agents; built-in form handling. | Free for small sites, no signup for first deploy. | https://harvis.dev |
+|28 | Shipvela | Static site hosting from GitHub or the CLI. | 3 projects, 20 publishes/mo, custom domains and HTTPS; no card. | https://shipvela.com |
 
 ---
 
