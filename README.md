@@ -101,6 +101,7 @@ A curated collection of free web hosting platforms for static sites, full-stack 
 |20 | Peon | Open-source self-hostable Docker PaaS (Vercel/Heroku alternative). | Self-host free (MIT). | https://peon.sh |
 |21 | Deplexo | PaaS hosting. | 1 app free. | https://deplexo.com |
 |22 | SnapDeploy | Docker container hosting on AWS. | 4 containers, 100 hrs/mo, no card. | https://snapdeploy.dev |
+|23 | FadeHost | Discord and Telegram bot and app hosting with GitHub deploy. | 256 MB app, runs around the clock, web address sleeps when idle, no card. | https://fadehost.com/app-hosting/ |
 
 ---
 
