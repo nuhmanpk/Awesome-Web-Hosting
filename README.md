@@ -102,6 +102,7 @@ A curated collection of free web hosting platforms for static sites, full-stack 
 |21 | Deplexo | PaaS hosting. | 1 app free. | https://deplexo.com |
 |22 | SnapDeploy | Docker container hosting on AWS. | 4 containers, 100 hrs/mo, no card. | https://snapdeploy.dev |
 |23 | FadeHost | Discord and Telegram bot and app hosting with GitHub deploy. | 256 MB app, runs around the clock, web address sleeps when idle, no card. | https://fadehost.com/app-hosting/ |
+|24 | blitz.cloud | Docker, GitHub and App Store deploys, hosted in the EU. | 5 apps, 512 MB RAM, 10 GB storage, 1 database with nightly backups, no card, sleeps after 30 min idle. | https://blitz.cloud |
 
 ---
 
