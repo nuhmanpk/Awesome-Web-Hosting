@@ -103,6 +103,7 @@ A curated collection of free web hosting platforms for static sites, full-stack 
 |22 | SnapDeploy | Docker container hosting on AWS. | 4 containers, 100 hrs/mo, no card. | https://snapdeploy.dev |
 |23 | FadeHost | Discord and Telegram bot and app hosting with GitHub deploy. | 256 MB app, runs around the clock, web address sleeps when idle, no card. | https://fadehost.com/app-hosting/ |
 |24 | blitz.cloud | Docker, GitHub and App Store deploys, hosted in the EU. | 5 apps, 512 MB RAM, 10 GB storage, 1 database with nightly backups, no card, sleeps after 30 min idle. | https://blitz.cloud |
+|25 | Prisma | Developer platform for TypeScript apps: managed Postgres, app hosting and an ORM. | Compute: 1M requests, 360 GB-hours, 4 vCPU-hours, 10 GB bandwidth/mo. Postgres: 50 databases, 2 GB, 200k operations/mo. Scales to zero, no card. | https://www.prisma.io/ |
 
 ---
 
