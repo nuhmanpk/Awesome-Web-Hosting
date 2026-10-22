@@ -30,12 +30,12 @@ A curated collection of free web hosting platforms for static sites, full-stack 
 <!-- CATEGORY_STATS_START -->
 | Category | Services |
 |---|---:|
-| [🌐 Static Site Hosting](#static-site-hosting) | 28 |
+| [🌐 Static Site Hosting](#static-site-hosting) | 29 |
 | [🔧 Full-Stack Platforms](#full-stack-platforms) | 25 |
 | [⚡ Serverless & Edge](#serverless--edge) | 3 |
 | [☁️ VPS & Cloud Infrastructure](#vps--cloud-infrastructure) | 7 |
 | [🎨 No-Code & Low-Code Builders](#no-code--low-code-builders) | 5 |
-| **Total** | **68** |
+| **Total** | **69** |
 <!-- CATEGORY_STATS_END -->
 
 ---
