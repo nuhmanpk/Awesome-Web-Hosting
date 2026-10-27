@@ -144,6 +144,7 @@ A curated collection of free web hosting platforms for static sites, full-stack 
 | 3 | Tilda | Block-based builder. | 1 site. | https://tilda.cc |
 | 4 | Versoly | SaaS site builder. | Unlimited sites. | https://versoly.com |
 | 5 | Figment.so | Figma-to-website publishing plugin. | Free figment.so subdomain hosting with a badge; no card required. Custom domains and HTML/CSS export are paid. | https://figment.so/ |
+| 6 | Benchlight | Website builder and host for small businesses; also works from Claude. | 1 site up to 10 MB on a benchlight.page address with a small credit, no card. Custom domains are paid. | https://benchlight.dev |
 
 ---
 
