@@ -2,17 +2,19 @@
 
 Automatically generated from the hosting services listed in `README.md`.
 
-**Last checked:** 2026-10-01 12:23 UTC
+**Last checked:** 2026-10-28 05:26 UTC
 
 ## 📊 Summary
 
 | Metric | Count |
 |---|---:|
-| Total Services | 64 |
-| 🟢 Online | 57 |
+| Total Services | 68 |
+| 🟢 Online | 62 |
 | 🟡 Redirect | 0 |
-| 🔴 Offline | 4 |
-| ⚠️ Error / Timeout | 0 |
+| 🔴 Offline | 3 |
+| ⚠️ Error | 2 |
+| ⏱️ Timeout | 1 |
+| ❔ Unknown | 0 |
 
 ## 🔎 Service Status
 
@@ -23,7 +25,7 @@ Automatically generated from the hosting services listed in `README.md`.
 | 🌐 Static Site Hosting | [Cloudflare Pages](https://pages.cloudflare.com) | 🟢 Online | 200 | https://pages.cloudflare.com |
 | 🌐 Static Site Hosting | [Deploy Now](https://deploynow.space) | 🟢 Online | 200 | https://deploynow.space |
 | 🌐 Static Site Hosting | [DigitalOcean App Platform](https://www.digitalocean.com) | 🟢 Online | 200 | https://www.digitalocean.com |
-| 🌐 Static Site Hosting | [Drive to Web](https://drv.tw) | ❔ Unknown | 000 | https://drv.tw |
+| 🌐 Static Site Hosting | [Drive to Web](https://drv.tw) | ⚠️ Error | 000 | https://drv.tw |
 | 🌐 Static Site Hosting | [Hostman](https://hostman.com) | 🟢 Online | 200 | https://hostman.com |
 | 🌐 Static Site Hosting | [Neocities](https://neocities.org) | 🟢 Online | 200 | https://neocities.org |
 | 🌐 Static Site Hosting | [Read the Docs](https://readthedocs.org) | 🟢 Online | 200 | https://readthedocs.org |
@@ -45,10 +47,13 @@ Automatically generated from the hosting services listed in `README.md`.
 | 🌐 Static Site Hosting | [Nippy](https://nippy.host) | 🟢 Online | 200 | https://nippy.host |
 | 🌐 Static Site Hosting | [host-html](https://host-html.com) | 🟢 Online | 200 | https://host-html.com |
 | 🌐 Static Site Hosting | [harvis.dev](https://harvis.dev) | 🟢 Online | 200 | https://harvis.dev |
+| 🌐 Static Site Hosting | [Shipvela](https://shipvela.com) | 🟢 Online | 200 | https://shipvela.com |
+| 🌐 Static Site Hosting | [deed.page](https://deed.page) | 🟢 Online | 200 | https://deed.page |
+| 🌐 Static Site Hosting | [Webly](https://webly.ai) | 🟢 Online | 200 | https://webly.ai |
 | 🔧 Full-Stack Platforms | [AlwaysData](https://www.alwaysdata.com) | 🟢 Online | 200 | https://www.alwaysdata.com |
 | 🔧 Full-Stack Platforms | [AwardSpace](https://www.awardspace.com) | 🟢 Online | 200 | https://www.awardspace.com |
 | 🔧 Full-Stack Platforms | [Bubble](https://bubble.io) | 🟢 Online | 200 | https://bubble.io |
-| 🔧 Full-Stack Platforms | [Fenix Web Server](https://fenixwebserver.com) | ❔ Unknown | 000 | https://fenixwebserver.com |
+| 🔧 Full-Stack Platforms | [Fenix Web Server](https://fenixwebserver.com) | ⚠️ Error | 000 | https://fenixwebserver.com |
 | 🔧 Full-Stack Platforms | [FreeHostingNoAds](https://freehostingnoads.net) | 🟢 Online | 200 | https://freehostingnoads.net |
 | 🔧 Full-Stack Platforms | [Freehostia](https://freehostia.com) | 🟢 Online | 200 | https://freehostia.com |
 | 🔧 Full-Stack Platforms | [Pantheon](https://pantheon.io) | 🟢 Online | 200 | https://pantheon.io |
@@ -57,8 +62,7 @@ Automatically generated from the hosting services listed in `README.md`.
 | 🔧 Full-Stack Platforms | [StormKit](https://stormkit.io) | 🟢 Online | 200 | https://stormkit.io |
 | 🔧 Full-Stack Platforms | [Qoddi](https://qoddi.com) | 🟢 Online | 200 | https://qoddi.com |
 | 🔧 Full-Stack Platforms | [FreeFlarum](https://freeflarum.com) | 🟢 Online | 200 | https://freeflarum.com |
-| 🔧 Full-Stack Platforms | [Fleek](https://fleek.co) | ❔ Unknown | 000 | https://fleek.co |
-| 🔧 Full-Stack Platforms | [Raven Host](https://ravenhost.space) | 🟢 Online | 200 | https://ravenhost.space |
+| 🔧 Full-Stack Platforms | [Raven Host](https://ravenhost.space) | ⚠️ Timeout | 000 | https://ravenhost.space |
 | 🔧 Full-Stack Platforms | [Heroku](https://heroku.com) | 🟢 Online | 200 | https://heroku.com |
 | 🔧 Full-Stack Platforms | [InfinityFree](https://infinityfree.net) | 🟢 Online | 200 | https://infinityfree.net |
 | 🔧 Full-Stack Platforms | [Firebase](https://firebase.google.com) | 🟢 Online | 200 | https://firebase.google.com |
@@ -67,7 +71,11 @@ Automatically generated from the hosting services listed in `README.md`.
 | 🔧 Full-Stack Platforms | [Peon](https://peon.sh) | 🟢 Online | 200 | https://peon.sh |
 | 🔧 Full-Stack Platforms | [Deplexo](https://deplexo.com) | 🟢 Online | 200 | https://deplexo.com |
 | 🔧 Full-Stack Platforms | [SnapDeploy](https://snapdeploy.dev) | 🟢 Online | 200 | https://snapdeploy.dev |
-| ⚡ Serverless & Edge | [Firebase Functions](https://firebase.google.com) | 🟢 Online | 200 | https://firebase.google.com |
+| 🔧 Full-Stack Platforms | [FadeHost](https://fadehost.com/app-hosting/) | 🟢 Online | 200 | https://fadehost.com/app-hosting/ |
+| 🔧 Full-Stack Platforms | [blitz.cloud](https://blitz.cloud) | 🟢 Online | 200 | https://blitz.cloud |
+| 🔧 Full-Stack Platforms | [Prisma](https://www.prisma.io/) | 🟢 Online | 200 | https://www.prisma.io/ |
+| 🔧 Full-Stack Platforms | [Cloady](https://cloady.com) | 🟢 Online | 200 | https://cloady.com |
+| 🔧 Full-Stack Platforms | [Light Cloud](https://light-cloud.com) | 🟢 Online | 200 | https://light-cloud.com |
 | ⚡ Serverless & Edge | [Cloudflare Workers](https://workers.cloudflare.com) | 🟢 Online | 200 | https://workers.cloudflare.com |
 | ⚡ Serverless & Edge | [AWS Lambda](https://aws.amazon.com/lambda) | 🟢 Online | 200 | https://aws.amazon.com/lambda |
 | ☁️ VPS & Cloud Infrastructure | [Google Cloud](https://cloud.google.com) | 🟢 Online | 200 | https://cloud.google.com |
@@ -76,20 +84,20 @@ Automatically generated from the hosting services listed in `README.md`.
 | ☁️ VPS & Cloud Infrastructure | [AWS Lightsail](https://aws.amazon.com/lightsail) | 🟢 Online | 200 | https://aws.amazon.com/lightsail |
 | ☁️ VPS & Cloud Infrastructure | [Vultr](https://vultr.com) | 🔴 Offline | 403 | https://vultr.com |
 | ☁️ VPS & Cloud Infrastructure | [Alibaba Cloud](https://alibabacloud.com) | 🟢 Online | 200 | https://alibabacloud.com |
-| ☁️ VPS & Cloud Infrastructure | [Linode (Akamai)](https://linode.com) | 🔴 Offline | 403 | https://linode.com |
-| 🎨 No-Code & Low-Code Builders | [Bubble](https://bubble.io) | 🟢 Online | 200 | https://bubble.io |
+| ☁️ VPS & Cloud Infrastructure | [Linode (Akamai)](https://linode.com) | 🟢 Online | 200 | https://linode.com |
 | 🎨 No-Code & Low-Code Builders | [Wix](https://wix.com) | 🟢 Online | 200 | https://wix.com |
-| 🎨 No-Code & Low-Code Builders | [Tilda](https://tilda.cc) | 🟢 Online | 200 | https://tilda.cc |
-| 🎨 No-Code & Low-Code Builders | [Versoly](https://versoly.com) | 🟢 Online | 200 | https://versoly.com |
 | 🎨 No-Code & Low-Code Builders | [Figment.so](https://figment.so/) | 🟢 Online | 200 | https://figment.so/ |
+| 🎨 No-Code & Low-Code Builders | [Benchlight](https://benchlight.dev) | 🟢 Online | 200 | https://benchlight.dev |
 
 ---
 
 ### ℹ️ Status Definitions
 
 - 🟢 **Online** — The service returned a successful HTTP response.
-- 🟡 **Redirect** — The service redirected to another URL.
+- 🟡 **Redirect** — The final HTTP response was a redirect.
 - 🔴 **Offline** — The service returned a 4xx response.
-- ⚠️ **Error / Timeout** — The service could not be reached reliably.
+- ⚠️ **Error** — The request failed or the server returned a 5xx response.
+- ⏱️ **Timeout** — The request exceeded its time limit.
+- ❔ **Unknown** — The HTTP status could not be classified.
 
-> Status checks are automated and may occasionally produce false positives due to temporary network issues, rate limits, maintenance, or bot protection.
+> Automated checks may produce false positives due to temporary network issues, rate limits, maintenance, or bot protection.
