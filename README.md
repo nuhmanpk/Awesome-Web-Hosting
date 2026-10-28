@@ -16,14 +16,6 @@ A curated collection of free web hosting platforms for static sites, full-stack 
 
 </div>
 
----
-
-> ⚠️ **Important:** Hosting availability and free-tier limits can change at any time.  
-> Before choosing a service, check the latest automated availability results in **[STATUS.md](STATUS.md)** to see which listed services are currently reachable.
->
-> 🔎 **[View Current Hosting Status →](STATUS.md)**
-
----
 
 ## 📚 Categories
 
@@ -90,16 +82,15 @@ A curated collection of free web hosting platforms for static sites, full-stack 
 | 7 | Pantheon | WP/Drupal PaaS. | Dev sites free. | https://pantheon.io |
 | 8 | Render | App & DB hosting. | 750 hrs/mo. | https://render.com |
 | 9 | SourceForge | OSS hosting. | Unlimited projects. | https://sourceforge.net |
-|10 | StormKit | App deploy platform. | Unlimited sites. | https://stormkit.io |
-|11 | Qoddi | Heroku-like PaaS. | 1 app free. | https://qoddi.com |
-|12 | FreeFlarum | Forum hosting. | 250 users. | https://freeflarum.com |
-|13 | Fleek | Open-web hosting. | Unlimited sites. | https://fleek.co |
-|14 | Raven Host | Discord bot & app hosting. | 24/7, 75% CPU / 1 GB / 5 GB, free forever. | https://ravenhost.space |
-|15 | Heroku | PaaS hosting. | Eco dynos. | https://heroku.com |
-|16 | InfinityFree | PHP/MySQL hosting. | 5 GB disk. | https://infinityfree.net |
-|17 | Firebase | Hosting + DB. | 10 GB transfer. | https://firebase.google.com |
-|18 | HelioHost | Non-profit hosting. | 1 GB storage. | https://heliohost.org |
-|19 | Dada Cloud | Git-push PaaS for Next.js, FastAPI, static & Docker, ruble-native billing for RU devs. | 1 app, 1 DB, 1GB, 1 domain. | https://cloud.dada-tuda.ru/?utm_source=awesome_webhosting |
+| 10 | StormKit | App deploy platform. | Unlimited sites. | https://stormkit.io |
+| 11 | Qoddi | Heroku-like PaaS. | 1 app free. | https://qoddi.com |
+| 12 | FreeFlarum | Forum hosting. | 250 users. | https://freeflarum.com |
+| 13 | Raven Host | Discord bot & app hosting. | 24/7, 75% CPU / 1 GB / 5 GB, free forever. | https://ravenhost.space |
+| 14 | Heroku | PaaS hosting. | Eco dynos. | https://heroku.com |
+| 15 | InfinityFree | PHP/MySQL hosting. | 5 GB disk. | https://infinityfree.net |
+| 16 | Firebase | Hosting + DB. | 10 GB transfer. | https://firebase.google.com |
+| 17 | HelioHost | Non-profit hosting. | 1 GB storage. | https://heliohost.org |
+| 18 | Dada Cloud | Git-push PaaS for Next.js, FastAPI, static & Docker, ruble-native billing for RU devs. | 1 app, 1 DB, 1GB, 1 domain. | https://cloud.dada-tuda.ru/?utm_source=awesome_webhosting |
 |20 | Peon | Open-source self-hostable Docker PaaS (Vercel/Heroku alternative). | Self-host free (MIT). | https://peon.sh |
 |21 | Deplexo | PaaS hosting. | 1 app free. | https://deplexo.com |
 |22 | SnapDeploy | Docker container hosting on AWS. | 4 containers, 100 hrs/mo, no card. | https://snapdeploy.dev |
@@ -202,6 +193,11 @@ Reach out through **[email](mailto:nuhmanpk7@gmail.com)** or submit a **[Pull Re
 
 ---
 
+> ⚠️ **Important:** Hosting availability and free-tier limits can change at any time.  
+> Before choosing a service, check the latest automated availability results in **[STATUS.md](STATUS.md)** to see which listed services are currently reachable.
+>
+> 🔎 **[View Current Hosting Status →](STATUS.md)**
 
+---
 
 Made with ❤️ by [nuhmanpk](github.com/nuhmanpk)
