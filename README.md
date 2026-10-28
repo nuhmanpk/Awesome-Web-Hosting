@@ -16,6 +16,15 @@ A curated collection of free web hosting platforms for static sites, full-stack 
 
 </div>
 
+---
+
+> ⚠️ **Important:** Hosting availability and free-tier limits can change at any time.  
+> Before choosing a service, check the latest automated availability results in **[STATUS.md](STATUS.md)** to see which listed services are currently reachable.
+>
+> 🔎 **[View Current Hosting Status →](STATUS.md)**
+
+---
+
 
 ## 📚 Categories
 
@@ -191,13 +200,5 @@ Reach out through **[email](mailto:nuhmanpk7@gmail.com)** or submit a **[Pull Re
 
 </div>
 
----
-
-> ⚠️ **Important:** Hosting availability and free-tier limits can change at any time.  
-> Before choosing a service, check the latest automated availability results in **[STATUS.md](STATUS.md)** to see which listed services are currently reachable.
->
-> 🔎 **[View Current Hosting Status →](STATUS.md)**
-
----
 
 Made with ❤️ by [nuhmanpk](github.com/nuhmanpk)
