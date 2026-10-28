@@ -1,3 +1,4 @@
+
 name: Update Hosting Status
 
 on:
@@ -15,40 +16,55 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: update-hosting-status
+  cancel-in-progress: false
+
 jobs:
   update-status:
     if: github.event_name != 'pull_request' || github.event.pull_request.merged == true
     runs-on: ubuntu-latest
+    timeout-minutes: 10
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
 
       - name: Generate STATUS.md
+        shell: bash
         run: |
           python3 <<'PY'
           import re
           import subprocess
           from pathlib import Path
           from datetime import datetime, timezone
+          from concurrent.futures import ThreadPoolExecutor
 
           readme_path = Path("README.md")
           status_path = Path("STATUS.md")
 
+          if not readme_path.exists():
+              raise FileNotFoundError("README.md was not found")
+
           readme = readme_path.read_text(encoding="utf-8")
 
           services = []
+          seen_urls = set()
 
-          sections = re.split(
-              r"(?=^## )",
-              readme,
-              flags=re.MULTILINE
-          )
+          sections = re.split(r"(?=^## )", readme, flags=re.MULTILINE)
 
           ignored_sections = {
               "📚 Categories",
               "🤝 Promote or Feature Your Service"
           }
+
+          row_pattern = re.compile(
+              r"^\|\s*(\d+)\s*\|\s*([^|]+?)\s*\|\s*([^|]+?)\s*\|\s*([^|]+?)\s*\|\s*(https?://[^|\s]+)\s*\|",
+              re.MULTILINE
+          )
 
           for section in sections:
               heading = re.match(r"^## (.+)", section)
@@ -61,19 +77,24 @@ jobs:
               if category in ignored_sections:
                   continue
 
-              rows = re.findall(
-                  r"^\|\s*(\d+)\s*\|\s*([^|]+?)\s*\|\s*([^|]+?)\s*\|\s*([^|]+?)\s*\|\s*(https?://[^|\s]+)\s*\|",
-                  section,
-                  flags=re.MULTILINE
-              )
+              for match in row_pattern.finditer(section):
+                  number, service, description, free_tier, url = match.groups()
+                  url = url.strip().rstrip(".,)")
 
-              for number, service, description, free_tier, url in rows:
+                  if url in seen_urls:
+                      continue
+
+                  seen_urls.add(url)
+
                   services.append({
                       "category": category,
                       "number": int(number),
                       "service": service.strip(),
-                      "url": url.strip()
+                      "url": url
                   })
+
+          if not services:
+              raise RuntimeError("No hosting services were found in README.md")
 
           print(f"Found {len(services)} services in README.md")
 
@@ -83,29 +104,41 @@ jobs:
                       [
                           "curl",
                           "-L",
-                          "-s",
+                          "-sS",
                           "-o",
                           "/dev/null",
                           "-w",
                           "%{http_code}|%{url_effective}",
                           "--connect-timeout",
-                          "10",
+                          "5",
                           "--max-time",
-                          "30",
+                          "15",
+                          "--max-redirs",
+                          "10",
+                          "--proto",
+                          "=http,https",
                           "-A",
-                          "Mozilla/5.0",
+                          "Mozilla/5.0 (compatible; HostingStatusBot/1.0)",
                           url
                       ],
                       capture_output=True,
-                      text=True
+                      text=True,
+                      timeout=20
                   )
 
                   output = result.stdout.strip()
 
                   if "|" not in output:
+                      if result.returncode == 28:
+                          return "TIMEOUT", "N/A", url
                       return "ERROR", "N/A", url
 
                   status_code, final_url = output.split("|", 1)
+
+                  if status_code == "000":
+                      if result.returncode == 28:
+                          return "TIMEOUT", status_code, final_url or url
+                      return "ERROR", status_code, final_url or url
 
                   if status_code.startswith("2"):
                       return "ONLINE", status_code, final_url
@@ -119,43 +152,42 @@ jobs:
                   if status_code.startswith("5"):
                       return "ERROR", status_code, final_url
 
-                  return "UNKNOWN", status_code, final_url
+                  return "UNKNOWN", status_code, final_url or url
 
               except subprocess.TimeoutExpired:
                   return "TIMEOUT", "N/A", url
 
-              except Exception:
+              except Exception as exc:
+                  print(f"Request failed for {url}: {exc}")
                   return "ERROR", "N/A", url
 
-          checked_at = datetime.now(timezone.utc).strftime(
-              "%Y-%m-%d %H:%M UTC"
-          )
-
-          results = []
-
-          for index, service in enumerate(services, 1):
-              print(
-                  f"[{index}/{len(services)}] "
-                  f"Checking {service['service']}..."
-              )
-
+          def check_service(service):
               status, code, final_url = check_url(service["url"])
 
-              results.append({
+              return {
                   **service,
                   "status": status,
                   "code": code,
                   "final_url": final_url
-              })
+              }
+
+          with ThreadPoolExecutor(max_workers=10) as executor:
+              results = list(executor.map(check_service, services))
+
+          for index, result in enumerate(results, 1):
+              print(
+                  f"[{index}/{len(results)}] "
+                  f"{result['service']}: "
+                  f"{result['status']} ({result['code']})"
+              )
 
           total = len(results)
           online = sum(r["status"] == "ONLINE" for r in results)
           redirects = sum(r["status"] == "REDIRECT" for r in results)
           offline = sum(r["status"] == "OFFLINE" for r in results)
-          errors = sum(
-              r["status"] in ["ERROR", "TIMEOUT"]
-              for r in results
-          )
+          errors = sum(r["status"] == "ERROR" for r in results)
+          timeouts = sum(r["status"] == "TIMEOUT" for r in results)
+          unknown = sum(r["status"] == "UNKNOWN" for r in results)
 
           status_icons = {
               "ONLINE": "🟢 Online",
@@ -165,6 +197,10 @@ jobs:
               "ERROR": "⚠️ Error",
               "UNKNOWN": "❔ Unknown"
           }
+
+          checked_at = datetime.now(timezone.utc).strftime(
+              "%Y-%m-%d %H:%M UTC"
+          )
 
           lines = [
               "# 🌐 Hosting Status",
@@ -181,7 +217,9 @@ jobs:
               f"| 🟢 Online | {online} |",
               f"| 🟡 Redirect | {redirects} |",
               f"| 🔴 Offline | {offline} |",
-              f"| ⚠️ Error / Timeout | {errors} |",
+              f"| ⚠️ Error | {errors} |",
+              f"| ⏱️ Timeout | {timeouts} |",
+              f"| ❔ Unknown | {unknown} |",
               "",
               "## 🔎 Service Status",
               "",
@@ -190,17 +228,17 @@ jobs:
           ]
 
           for result in results:
-              status = status_icons.get(
-                  result["status"],
-                  result["status"]
-              )
+              status = status_icons[result["status"]]
+              service_name = result["service"].replace("[", "\\[").replace("]", "\\]")
+              url = result["url"]
+              safe_url = url.replace("(", "%28").replace(")", "%29")
 
               lines.append(
                   f"| {result['category']} | "
-                  f"[{result['service']}]({result['url']}) | "
+                  f"[{service_name}]({safe_url}) | "
                   f"{status} | "
                   f"{result['code']} | "
-                  f"{result['url']} |"
+                  f"{safe_url} |"
               )
 
           lines.extend([
@@ -210,11 +248,13 @@ jobs:
               "### ℹ️ Status Definitions",
               "",
               "- 🟢 **Online** — The service returned a successful HTTP response.",
-              "- 🟡 **Redirect** — The service redirected to another URL.",
+              "- 🟡 **Redirect** — The final HTTP response was a redirect.",
               "- 🔴 **Offline** — The service returned a 4xx response.",
-              "- ⚠️ **Error / Timeout** — The service could not be reached reliably.",
+              "- ⚠️ **Error** — The request failed or the server returned a 5xx response.",
+              "- ⏱️ **Timeout** — The request exceeded its time limit.",
+              "- ❔ **Unknown** — The HTTP status could not be classified.",
               "",
-              "> Status checks are automated and may occasionally produce false positives due to temporary network issues, rate limits, maintenance, or bot protection.",
+              "> Automated checks may produce false positives due to temporary network issues, rate limits, maintenance, or bot protection.",
               ""
           ])
 
@@ -227,7 +267,8 @@ jobs:
           print(f"Checked {total} services")
           PY
 
-      - name: Commit STATUS.md
+      - name: Commit and push STATUS.md
+        shell: bash
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -236,7 +277,8 @@ jobs:
 
           if git diff --cached --quiet; then
             echo "STATUS.md is already up to date."
-          else
-            git commit -m "chore: update hosting status"
-            git push
+            exit 0
           fi
+
+          git commit -m "chore: update hosting status"
+          git push origin HEAD:main
