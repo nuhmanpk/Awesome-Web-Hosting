@@ -108,6 +108,7 @@ A curated collection of free web hosting platforms for static sites, full-stack 
 |25 | Prisma | Developer platform for TypeScript apps: managed Postgres, app hosting and an ORM. | Compute: 1M requests, 360 GB-hours, 4 vCPU-hours, 10 GB bandwidth/mo. Postgres: 50 databases, 2 GB, 200k operations/mo. Scales to zero, no card. | https://www.prisma.io/ |
 |26 | Cloady | App and database hosting from GitHub, Docker images, folders or templates. | 0.5 vCPU, 1 GB RAM, 5 GB persistent SSD and 200 GB traffic per workspace. No card; phone verification required. Exceeding any resource allowance makes the full workspace capacity billable. | https://cloady.com |
 |27 | Light Cloud | Git-based app and static site hosting. | $1 of usage/mo, 3 server apps (scale to zero), unlimited static sites, no card. | https://light-cloud.com |
+|28 | Uppcoder | App hosting with its own database, VS Code in the browser and SSH. | 1 app + PostgreSQL, MySQL or MariaDB, 2 GB RAM, 2 GB disk, own HTTPS address, does not sleep, no expiry, no card. | https://portal.uppcoder.com |
 
 ---
 
