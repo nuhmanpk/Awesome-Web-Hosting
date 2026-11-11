@@ -13,10 +13,16 @@ permissions:
 jobs:
   update-stats:
     runs-on: ubuntu-latest
+    timeout-minutes: 5
+    concurrency:
+      group: update-stats
+      cancel-in-progress: false
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Update category counts
         run: |
@@ -48,9 +54,9 @@ jobs:
                   continue
 
               table_match = re.search(
-                  r"\|\s*#\s*\|\s*Service\s*\|.*?\n\|[-| :]+\|.*?\n((?:\|.*\n?)*)",
+                  r"^\|\s*Service\s*\|.*?\n\|[-| :]+\|.*?\n((?:\|.*\n?)*)",
                   section,
-                  flags=re.IGNORECASE
+                  flags=re.IGNORECASE | re.MULTILINE
               )
 
               if not table_match:
@@ -58,11 +64,10 @@ jobs:
 
               table_rows = [
                   line for line in table_match.group(1).splitlines()
-                  if re.match(r"\|\s*\d+\s*\|", line)
+                  if re.match(r"\|\s*\[[^\]]+\]\(https?://", line)
               ]
 
-              if table_rows:
-                  rows.append((title, len(table_rows)))
+              rows.append((title, len(table_rows)))
 
           total = sum(count for _, count in rows)
 
@@ -73,7 +78,7 @@ jobs:
           ]
 
           for title, count in rows:
-              table.append(f"| [{title}](#{re.sub(r'[^a-z0-9 -]', '', title.lower()).strip().replace(' ', '-')}) | {count} |")
+              table.append(f"| [{title}](#{re.sub(r'[^a-z0-9 -]', '', title.lower()).replace(' ', '-')}) | {count} |")
 
           table.append(f"| **Total** | **{total}** |")
           table.append(stats_end)
@@ -103,5 +108,7 @@ jobs:
             echo "No changes"
           else
             git commit -m "chore: update hosting statistics"
-            git push
+            # update-status may push STATUS.md at the same time after a merge.
+            git pull --rebase origin main
+            git push origin HEAD:main
           fi

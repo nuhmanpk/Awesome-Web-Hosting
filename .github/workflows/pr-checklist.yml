@@ -24,7 +24,7 @@ jobs:
             const checklist = [
               "I checked that the service is not already listed.",
               "I verified the official website and free tier.",
-              "I added the service to the correct category.",
+              "I added one row to the right category, in alphabetical order.",
               "I followed the existing table format.",
               "I used the official service URL.",
               "I checked the Markdown formatting.",
@@ -32,14 +32,15 @@ jobs:
             ];
 
             const missing = checklist.filter(item => {
-              const unchecked = new RegExp(`- \\[ \\] ${item.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}`);
-              return unchecked.test(body);
+              // Require each item to be present AND checked; deleted lines count as missing.
+              const checked = new RegExp(`[-*] \\[[xX]\\] ${item.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}`);
+              return !checked.test(body);
             });
 
             if (missing.length > 0) {
               core.setFailed(
                 `Please complete the PR checklist before merging:\n\n${missing.map(item => `- ${item}`).join("\n")}`
               );
+            } else {
+              console.log("All PR checklist items are completed.");
             }
-
-            console.log("All PR checklist items are completed.");
