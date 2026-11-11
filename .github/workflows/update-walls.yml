@@ -1,0 +1,91 @@
+name: Update Star & Fork Walls
+
+on:
+  schedule:
+    - cron: "0 5 * * 1" # weekly, Monday 05:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-walls
+  cancel-in-progress: false
+
+jobs:
+  update-walls:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Fetch stargazers and forkers
+        env:
+          # Built-in token GitHub creates for every run. No secret needs to be added.
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh api --paginate "repos/${{ github.repository }}/stargazers?per_page=100" \
+            --jq '.[] | [.login, .avatar_url, .html_url] | @tsv' > stars.tsv
+          gh api --paginate "repos/${{ github.repository }}/forks?per_page=100&sort=oldest" \
+            --jq '.[] | .owner | [.login, .avatar_url, .html_url] | @tsv' > forks.tsv
+          wc -l stars.tsv forks.tsv
+
+      - name: Render walls into CONTRIBUTORS.md
+        run: |
+          python3 <<'PY'
+          import re
+          from pathlib import Path
+
+          MAX = 300  # newest N avatars per wall keeps the page light
+
+          def load(path):
+              users = []
+              for line in Path(path).read_text().splitlines():
+                  parts = line.split("\t")
+                  if len(parts) == 3:
+                      users.append({"login": parts[0], "avatar_url": parts[1], "html_url": parts[2]})
+              seen, out = set(), []
+              for u in reversed(users):  # newest first
+                  if u["login"] not in seen:
+                      seen.add(u["login"])
+                      out.append(u)
+              return out
+
+          def wall(users):
+              total = len(users)
+              cells = [
+                  f'<a href="{u["html_url"]}" title="{u["login"]}">'
+                  f'<img src="{u["avatar_url"]}{"&" if "?" in u["avatar_url"] else "?"}s=64" width="48" height="48" alt="{u["login"]}" /></a>'
+                  for u in users[:MAX]
+              ]
+              note = f"\n\n<sub>Showing the newest {MAX} of {total}.</sub>" if total > MAX else ""
+              return f"<sub>{total} people</sub>\n\n" + "\n".join(cells) + note if cells else "_Nobody yet — be the first!_"
+
+          path = Path("CONTRIBUTORS.md")
+          text = path.read_text(encoding="utf-8")
+          for name, users in (("STAR_WALL", load("stars.tsv")), ("FORK_WALL", load("forks.tsv"))):
+              start, end = f"<!-- {name}_START -->", f"<!-- {name}_END -->"
+              pattern = re.escape(start) + r".*?" + re.escape(end)
+              if not re.search(pattern, text, flags=re.DOTALL):
+                  raise RuntimeError(f"Markers for {name} not found in CONTRIBUTORS.md")
+              text = re.sub(pattern, lambda _: f"{start}\n{wall(users)}\n{end}", text, flags=re.DOTALL)
+          path.write_text(text, encoding="utf-8")
+          PY
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add CONTRIBUTORS.md
+          if git diff --cached --quiet; then
+            echo "Walls are already up to date."
+            exit 0
+          fi
+          git commit -m "chore: update star and fork walls"
+          git pull --rebase origin main
+          git push origin HEAD:main

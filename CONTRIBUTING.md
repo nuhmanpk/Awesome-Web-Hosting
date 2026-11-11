@@ -11,6 +11,7 @@ The repository currently organizes services into these categories:
 - ⚡ Serverless & Edge
 - ☁️ VPS & Cloud Infrastructure
 - 🎨 No-Code & Low-Code Builders
+- 🧪 Indie & Hobby Projects
 
 The README uses a fixed table structure for every category, and contributors are expected to follow that structure exactly.
 
@@ -97,9 +98,9 @@ These rules are mandatory.
 Every hosting service must use exactly this structure:
 
 ```md
-| # | Service | Description | Free Tier Highlights | Link |
-|---|--------|-------------|----------------------|------|
-| 1 | Service Name | Short description. | Free-tier details. | https://example.com |
+| Service | Description | Free Tier Highlights |
+|---|---|---|
+| [Service Name](https://example.com) | Short description. | Free-tier details. |
 ```
 
 Do not create a different table format.
@@ -119,15 +120,15 @@ Each service must occupy exactly one row.
 Correct:
 
 ```md
-| 28 | Example Hosting | Static hosting platform. | 1 GB storage. | https://example.com |
-| 29 | Another Host | Full-stack hosting. | 512 MB RAM. | https://another.example |
+| [Example Hosting](https://example.com) | Static hosting platform. | 1 GB storage. |
+| [Another Host](https://another.example) | Full-stack hosting. | 512 MB RAM. |
 ```
 
 Incorrect:
 
 ```md
-| 28 | Example Hosting |
-| 29 | Another Host | Full-stack hosting. |
+| Example Hosting |
+| Another Host | Full-stack hosting. |
 ```
 
 Do not split one service across multiple rows.
@@ -136,40 +137,34 @@ Do not combine multiple services into one row.
 
 ---
 
-## Rule 3 — Keep Numbering Sequential
+## Rule 3 — Keep Rows in Alphabetical Order
 
-The `#` column must remain sequential within each category.
-
-For example:
+Rows inside each category are sorted alphabetically by service name (case-insensitive). Insert your row in the right place.
 
 ```md
-| 1 | Service A | ... |
-| 2 | Service B | ... |
-| 3 | Service C | ... |
+| [Alpha Host](https://alpha.example) | ... | ... |
+| [Beta Host](https://beta.example) | ... | ... |
+| [Gamma Host](https://gamma.example) | ... | ... |
 ```
 
-If you add a new service between entries 10 and 11, update the numbering accordingly.
+There is no number column, so you never need to renumber other rows.
 
-Do not use:
+The **Validate README** check runs on every PR. It fails if rows are out of alphabetical order, use the wrong format, or duplicate an existing name or URL. It also warns if a PR adds more than one service. You can run it locally:
 
-```md
-| 10 | Service A | ... |
-| 15 | Service B | ... |
-| 27 | Service C | ... |
+```bash
+python3 .github/scripts/validate_readme.py
 ```
-
-The category numbering should always be continuous.
 
 ---
 
 ## Rule 4 — Use the Official Service URL
 
-The `Link` column must point to the official website of the service.
+The service name must link to the official website of the service.
 
 Correct:
 
 ```md
-| 28 | Example Host | Static hosting. | 1 GB storage. | https://example.com |
+| [Example Host](https://example.com) | Static hosting. | 1 GB storage. |
 ```
 
 Avoid:
@@ -245,23 +240,13 @@ Do not hide important limitations.
 
 # 🧱 Required Entry Format
 
-Every entry has exactly five fields:
+Every entry has exactly three columns:
 
 ```text
-# | Service | Description | Free Tier Highlights | Link
+| [Service](URL) | Description | Free Tier Highlights |
 ```
 
-## 1. Number
-
-The number identifies the service within its category.
-
-Example:
-
-```md
-| 28 | Example Host | ... | ... | https://example.com |
-```
-
-## 2. Service
+## 1. Service
 
 Use the official product/service name.
 
@@ -270,16 +255,16 @@ Do not add unnecessary marketing text.
 Good:
 
 ```md
-| 28 | Example Host | ... |
+| Example Host | ... |
 ```
 
 Avoid:
 
 ```md
-| 28 | Example Host - THE BEST FREE HOSTING EVER | ... |
+| Example Host - THE BEST FREE HOSTING EVER | ... |
 ```
 
-## 3. Description
+## 2. Description
 
 Keep the description short and factual.
 
@@ -298,7 +283,7 @@ The description should tell the reader what the service is.
 
 Do not turn the description into an advertisement.
 
-## 4. Free Tier Highlights
+## 3. Free Tier Highlights
 
 This field should contain the most useful free-tier limits.
 
@@ -328,9 +313,9 @@ When there are several important limits:
 
 Use concise values.
 
-## 5. Link
+## 4. Link
 
-Use the official service URL:
+Link the service name to its official URL:
 
 ```text
 https://example.com
@@ -406,6 +391,23 @@ Examples include:
 - Visual page builders
 
 If a service clearly fits multiple categories, choose the category that best represents its primary free hosting capability.
+
+## 🧪 Indie & Hobby Projects
+
+Use this category for free hosting **you built yourself** (or a small hobby team built), whatever kind of hosting it is.
+
+Your project is welcome here if:
+
+- It is live and anyone can sign up and deploy today. No waitlists or "coming soon".
+- The free tier is real and its limits are stated honestly.
+- You actively maintain it.
+- It does not exist mainly to collect sign-ups, data or referral rewards.
+
+Open-source and self-hostable projects are welcome; say so in the description.
+
+Add **one row per project**, in alphabetical order, using the same three-column format as every other category. In your PR, mention that you are the maker.
+
+Once a project is established and widely used, a maintainer may move it into the matching main category.
 
 ---
 
@@ -541,21 +543,21 @@ Place the service in the most appropriate category.
 
 ## Step 5 — Add the Row
 
-Use the exact five-column format:
+Use the exact three-column format:
 
 ```md
-| 28 | Example Host | Static hosting platform. | 1 GB storage, custom domains. | https://example.com |
+| [Example Host](https://example.com) | Static hosting platform. | 1 GB storage, custom domains. |
 ```
 
-## Step 6 — Fix Numbering
+## Step 6 — Check Alphabetical Order
 
-Make sure every row in that category is sequential.
+Make sure your row sits in alphabetical order within its category.
 
 ## Step 7 — Check Markdown
 
 Make sure:
 
-- Every row has five columns.
+- Every row has three columns.
 - Every URL is valid.
 - No `|` characters accidentally break a cell.
 - No row is missing a value.
@@ -583,13 +585,13 @@ When updating an existing listing:
 For example, if a service changes from:
 
 ```md
-| 10 | Example Host | Static hosting. | 1 GB storage. | https://example.com |
+| [Example Host](https://example.com) | Static hosting. | 1 GB storage. |
 ```
 
 to:
 
 ```md
-| 10 | Example Host | Static hosting. | 5 GB storage, 100 GB bandwidth. | https://example.com |
+| [Example Host](https://example.com) | Static hosting. | 5 GB storage, 100 GB bandwidth. |
 ```
 
 mention the source and reason for the change in your PR.
@@ -640,10 +642,10 @@ Before submitting your Pull Request, verify every item below.
 
 ### Formatting
 
-- [ ] I used the existing five-column table structure.
+- [ ] I used the existing three-column table structure.
 - [ ] I added exactly one service per row.
 - [ ] I used the correct category.
-- [ ] Numbering is sequential.
+- [ ] The row is in alphabetical order.
 - [ ] The description is concise.
 - [ ] Free-tier information is factual.
 - [ ] The official URL is used.
@@ -705,7 +707,7 @@ Explain where you verified the information.
 - [ ] Free tier verified
 - [ ] Correct category selected
 - [ ] Table format followed
-- [ ] Numbering checked
+- [ ] Alphabetical order checked
 - [ ] No unrelated changes
 - [ ] README reviewed
 ```
@@ -726,7 +728,7 @@ A Pull Request may be rejected or requested for changes when it contains:
 - Unofficial URLs
 - Broken Markdown
 - Incorrect table structure
-- Incorrect numbering
+- Rows out of alphabetical order
 - Excessive marketing language
 - Unrelated README changes
 - Bulk submissions without adequate verification

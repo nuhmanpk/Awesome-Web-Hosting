@@ -2,7 +2,9 @@
 name: Update Hosting Status
 
 on:
-  pull_request:
+  # pull_request_target: fork PRs get read-only GITHUB_TOKEN under pull_request.
+  # Safe here: job checks out main only, never PR code.
+  pull_request_target:
     types:
       - closed
     branches:
@@ -22,7 +24,7 @@ concurrency:
 
 jobs:
   update-status:
-    if: github.event_name != 'pull_request' || github.event.pull_request.merged == true
+    if: github.event_name != 'pull_request_target' || github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     timeout-minutes: 10
 
@@ -31,7 +33,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           ref: main
-          fetch-depth: 1
+          fetch-depth: 0
 
       - name: Generate STATUS.md
         shell: bash
@@ -39,6 +41,8 @@ jobs:
           python3 <<'PY'
           import re
           import subprocess
+          import time
+          from urllib.parse import quote
           from pathlib import Path
           from datetime import datetime, timezone
           from concurrent.futures import ThreadPoolExecutor
@@ -58,11 +62,12 @@ jobs:
 
           ignored_sections = {
               "📚 Categories",
+              "🧭 Quick Pick",
               "🤝 Promote or Feature Your Service"
           }
 
           row_pattern = re.compile(
-              r"^\|\s*(\d+)\s*\|\s*([^|]+?)\s*\|\s*([^|]+?)\s*\|\s*([^|]+?)\s*\|\s*(https?://[^|\s]+)\s*\|",
+              r"^\|\s*\[([^\]]+)\]\((https?://[^)\s]+)\)\s*\|",
               re.MULTILINE
           )
 
@@ -78,7 +83,7 @@ jobs:
                   continue
 
               for match in row_pattern.finditer(section):
-                  number, service, description, free_tier, url = match.groups()
+                  service, url = match.groups()
                   url = url.strip().rstrip(".,)")
 
                   if url in seen_urls:
@@ -88,7 +93,6 @@ jobs:
 
                   services.append({
                       "category": category,
-                      "number": int(number),
                       "service": service.strip(),
                       "url": url
                   })
@@ -97,6 +101,36 @@ jobs:
               raise RuntimeError("No hosting services were found in README.md")
 
           print(f"Found {len(services)} services in README.md")
+
+          def classify(code, server, cf_mitigated):
+              """Map an HTTP result to a status. Bot protection is never reported as Offline/Error."""
+              behind_cloudflare = "cloudflare" in server.lower()
+
+              # Cloudflare challenge page ("Just a moment...") — the site is up, the bot was challenged.
+              if cf_mitigated:
+                  return "BLOCKED"
+
+              if code.startswith("2"):
+                  return "ONLINE"
+              if code.startswith("3"):
+                  return "REDIRECT"
+
+              # Auth / bot-protection / rate limit responses mean the server is alive.
+              if code in {"401", "403", "406", "429"}:
+                  return "BLOCKED"
+
+              # Cloudflare edge answers 503 for "Under Attack" mode challenges.
+              if code == "503" and behind_cloudflare:
+                  return "BLOCKED"
+
+              if code.startswith("4"):
+                  return "OFFLINE"
+
+              # 5xx (incl. Cloudflare 52x = origin unreachable) is a real error.
+              if code.startswith("5"):
+                  return "ERROR"
+
+              return "UNKNOWN"
 
           def check_url(url):
               try:
@@ -108,51 +142,39 @@ jobs:
                           "-o",
                           "/dev/null",
                           "-w",
-                          "%{http_code}|%{url_effective}",
+                          "%{http_code}|%{url_effective}|%header{server}|%header{cf-mitigated}",
                           "--connect-timeout",
-                          "5",
+                          "10",
                           "--max-time",
-                          "15",
+                          "20",
                           "--max-redirs",
                           "10",
                           "--proto",
                           "=http,https",
+                          "-H",
+                          "Accept: text/html,application/xhtml+xml,*/*;q=0.8",
+                          "-H",
+                          "Accept-Language: en-US,en;q=0.9",
                           "-A",
-                          "Mozilla/5.0 (compatible; HostingStatusBot/1.0)",
+                          "Mozilla/5.0 (compatible; HostingStatusBot/1.0; +https://github.com/nuhmanpk/Awesome-Web-Hosting)",
                           url
                       ],
                       capture_output=True,
                       text=True,
-                      timeout=20
+                      timeout=30
                   )
 
-                  output = result.stdout.strip()
+                  parts = result.stdout.strip().split("|")
 
-                  if "|" not in output:
-                      if result.returncode == 28:
-                          return "TIMEOUT", "N/A", url
-                      return "ERROR", "N/A", url
+                  if len(parts) < 4:
+                      return ("TIMEOUT" if result.returncode == 28 else "ERROR"), "N/A", url
 
-                  status_code, final_url = output.split("|", 1)
+                  code, final_url, server, cf_mitigated = parts[0], parts[1], parts[2], parts[3]
 
-                  if status_code == "000":
-                      if result.returncode == 28:
-                          return "TIMEOUT", status_code, final_url or url
-                      return "ERROR", status_code, final_url or url
+                  if code == "000":
+                      return ("TIMEOUT" if result.returncode == 28 else "ERROR"), code, final_url or url
 
-                  if status_code.startswith("2"):
-                      return "ONLINE", status_code, final_url
-
-                  if status_code.startswith("3"):
-                      return "REDIRECT", status_code, final_url
-
-                  if status_code.startswith("4"):
-                      return "OFFLINE", status_code, final_url
-
-                  if status_code.startswith("5"):
-                      return "ERROR", status_code, final_url
-
-                  return "UNKNOWN", status_code, final_url or url
+                  return classify(code, server, cf_mitigated), code, final_url or url
 
               except subprocess.TimeoutExpired:
                   return "TIMEOUT", "N/A", url
@@ -161,8 +183,15 @@ jobs:
                   print(f"Request failed for {url}: {exc}")
                   return "ERROR", "N/A", url
 
+          RETRY_STATUSES = {"OFFLINE", "ERROR", "TIMEOUT", "UNKNOWN"}
+
           def check_service(service):
               status, code, final_url = check_url(service["url"])
+
+              # Retry once after a pause so transient blips are not reported as outages.
+              if status in RETRY_STATUSES:
+                  time.sleep(5)
+                  status, code, final_url = check_url(service["url"])
 
               return {
                   **service,
@@ -182,81 +211,127 @@ jobs:
               )
 
           total = len(results)
-          online = sum(r["status"] == "ONLINE" for r in results)
-          redirects = sum(r["status"] == "REDIRECT" for r in results)
-          offline = sum(r["status"] == "OFFLINE" for r in results)
-          errors = sum(r["status"] == "ERROR" for r in results)
-          timeouts = sum(r["status"] == "TIMEOUT" for r in results)
-          unknown = sum(r["status"] == "UNKNOWN" for r in results)
+          order = ["ONLINE", "REDIRECT", "BLOCKED", "OFFLINE", "ERROR", "TIMEOUT", "UNKNOWN"]
+          counts = {s: sum(r["status"] == s for r in results) for s in order}
+          reachable = counts["ONLINE"] + counts["REDIRECT"] + counts["BLOCKED"]
+          pct = round(100 * reachable / total) if total else 0
 
           status_icons = {
               "ONLINE": "🟢 Online",
               "REDIRECT": "🟡 Redirect",
+              "BLOCKED": "🛡️ Blocked",
               "OFFLINE": "🔴 Offline",
-              "TIMEOUT": "⚠️ Timeout",
               "ERROR": "⚠️ Error",
+              "TIMEOUT": "⏱️ Timeout",
               "UNKNOWN": "❔ Unknown"
           }
+          notes = {
+              "BLOCKED": "Site is up but refused the automated check (bot protection).",
+              "OFFLINE": "Returned a 4xx error. Page may have moved or service shut down.",
+              "ERROR": "Connection failed or server error (5xx). Domain may be dead.",
+              "TIMEOUT": "No response within 20 seconds, twice.",
+              "REDIRECT": "Ended on a redirect.",
+              "UNKNOWN": "Unexpected HTTP response."
+          }
 
-          checked_at = datetime.now(timezone.utc).strftime(
-              "%Y-%m-%d %H:%M UTC"
-          )
+          def note_for(r):
+              if r["status"] == "ERROR" and not r["code"].startswith("5"):
+                  return "Could not connect (DNS, TLS or network failure), twice. Domain may be dead."
+              if r["status"] == "ERROR":
+                  return "Server error (5xx). Service may be down."
+              return notes[r["status"]]
+
+          def esc(text):
+              return text.replace("|", "\\|").replace("[", "\\[").replace("]", "\\]")
+
+          def link(r):
+              return f"[{esc(r['service'])}]({r['url'].replace('(', '%28').replace(')', '%29')})"
+
+          def badge(label, value, color):
+              q = lambda s: quote(s.replace("-", "--").replace("_", "__"), safe="")
+              return f"![{label}](https://img.shields.io/badge/{q(label)}-{q(value)}-{color}?style=for-the-badge)"
+
+          health_color = "2ea44f" if pct >= 90 else "dbab09" if pct >= 75 else "d73a49"
+          checked_at = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
 
           lines = [
+              '<a id="top"></a>',
+              "",
+              '<div align="center">',
+              "",
               "# 🌐 Hosting Status",
               "",
-              "Automatically generated from the hosting services listed in `README.md`.",
+              "**Live reachability check for every service in [Free Web Hosting Gems](README.md).**",
               "",
-              f"**Last checked:** {checked_at}",
+              badge("Reachable", f"{pct}%", health_color) + " " + badge("Services", str(total), "0366d6"),
               "",
-              "## 📊 Summary",
+              f"🕒 Last checked **{checked_at}** · [← Back to the list](README.md)",
               "",
-              "| Metric | Count |",
-              "|---|---:|",
-              f"| Total Services | {total} |",
-              f"| 🟢 Online | {online} |",
-              f"| 🟡 Redirect | {redirects} |",
-              f"| 🔴 Offline | {offline} |",
-              f"| ⚠️ Error | {errors} |",
-              f"| ⏱️ Timeout | {timeouts} |",
-              f"| ❔ Unknown | {unknown} |",
-              "",
-              "## 🔎 Service Status",
-              "",
-              "| Category | Service | Status | HTTP | Link |",
-              "|---|---|---|---:|---|"
-          ]
-
-          for result in results:
-              status = status_icons[result["status"]]
-              service_name = result["service"].replace("[", "\\[").replace("]", "\\]")
-              url = result["url"]
-              safe_url = url.replace("(", "%28").replace(")", "%29")
-
-              lines.append(
-                  f"| {result['category']} | "
-                  f"[{service_name}]({safe_url}) | "
-                  f"{status} | "
-                  f"{result['code']} | "
-                  f"{safe_url} |"
-              )
-
-          lines.extend([
+              "</div>",
               "",
               "---",
               "",
-              "### ℹ️ Status Definitions",
+              "## 📊 Summary",
               "",
-              "- 🟢 **Online** — The service returned a successful HTTP response.",
-              "- 🟡 **Redirect** — The final HTTP response was a redirect.",
-              "- 🔴 **Offline** — The service returned a 4xx response.",
-              "- ⚠️ **Error** — The request failed or the server returned a 5xx response.",
-              "- ⏱️ **Timeout** — The request exceeded its time limit.",
-              "- ❔ **Unknown** — The HTTP status could not be classified.",
+              "| " + " | ".join(status_icons[s] for s in order) + " |",
+              "|" + ":---:|" * len(order),
+              "| " + " | ".join(f"**{counts[s]}**" for s in order) + " |",
               "",
-              "> Automated checks may produce false positives due to temporary network issues, rate limits, maintenance, or bot protection.",
+          ]
+
+          attention = [r for r in results if r["status"] != "ONLINE"]
+          lines += ["## 🚨 Needs Attention", ""]
+          if attention:
+              lines += [
+                  "These services did not return a clean response. Please verify before relying on them, and [open an issue](https://github.com/nuhmanpk/Awesome-Web-Hosting/issues/new) if one is gone for good.",
+                  "",
+                  "| Service | Category | Status | HTTP | What it means |",
+                  "|---|---|---|:---:|---|",
+              ]
+              for r in sorted(attention, key=lambda r: (order.index(r["status"]), r["service"].lower())):
+                  lines.append(f"| {link(r)} | {r['category']} | {status_icons[r['status']]} | `{r['code']}` | {note_for(r)} |")
+          else:
+              lines.append("✅ Every listed service responded normally.")
+          lines += ["", "## 🗂️ By Category", ""]
+
+          categories = list(dict.fromkeys(r["category"] for r in results))
+          for cat in categories:
+              rows = sorted((r for r in results if r["category"] == cat), key=lambda r: r["service"].lower())
+              up = sum(r["status"] == "ONLINE" for r in rows)
+              mark = "✅" if up == len(rows) else "⚠️"
+              lines += [
+                  "<details>",
+                  f"<summary><b>{cat}</b> — {mark} {up}/{len(rows)} online</summary>",
+                  "",
+                  "| Service | Status | HTTP |",
+                  "|---|---|:---:|",
+              ]
+              lines += [f"| {link(r)} | {status_icons[r['status']]} | `{r['code']}` |" for r in rows]
+              lines += ["", "</details>", ""]
+
+          lines += [
+              "---",
+              "",
+              "<details>",
+              "<summary><b>ℹ️ Status legend & how checks work</b></summary>",
+              "",
+              "| Status | Meaning |",
+              "|---|---|",
+              "| 🟢 Online | Returned a 2xx response. |",
+              "| 🟡 Redirect | Final response was a 3xx redirect. |",
+              "| 🛡️ Blocked | Site answered but blocked the check: a Cloudflare challenge, or 401, 403, 406, 429, or a Cloudflare 503. Usually up. |",
+              "| 🔴 Offline | Returned another 4xx response (e.g. 404, 410). |",
+              "| ⚠️ Error | Connection failed (DNS, TLS) or a 5xx server error, including Cloudflare 52x (origin down). |",
+              "| ⏱️ Timeout | No response within 20 seconds. |",
+              "| ❔ Unknown | Response could not be classified. |",
+              "",
+              "Checks run monthly and after each merged PR, with one HTTP request per homepage from a GitHub Actions runner. Failures are retried once after 5 seconds. Results can include false alarms from rate limits, maintenance or bot protection. A homepage being up does **not** confirm the free tier still exists.",
+              "",
+              "</details>",
+              "",
+              '<div align="right"><a href="#top">↑ Back to top</a></div>',
               ""
-          ])
+          ]
 
           status_path.write_text(
               "\n".join(lines),
@@ -281,4 +356,5 @@ jobs:
           fi
 
           git commit -m "chore: update hosting status"
+          git pull --rebase origin main
           git push origin HEAD:main

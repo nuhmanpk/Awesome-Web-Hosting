@@ -1,0 +1,27 @@
+name: Validate README
+
+on:
+  pull_request:
+    paths:
+      - README.md
+      - .github/scripts/validate_readme.py
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Checkout PR
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Get base README
+        run: git show "${{ github.event.pull_request.base.sha }}:README.md" > /tmp/README.base.md || true
+
+      - name: Check format, alphabetical order and duplicates
+        run: python3 .github/scripts/validate_readme.py /tmp/README.base.md
