@@ -32,11 +32,11 @@ A curated collection of free web hosting platforms for static sites, full-stack 
 | Category | Services |
 |---|---:|
 | [🌐 Static Site Hosting](#static-site-hosting) | 30 |
-| [🔧 Full-Stack Platforms](#full-stack-platforms) | 26 |
+| [🔧 Full-Stack Platforms](#full-stack-platforms) | 27 |
 | [⚡ Serverless & Edge](#serverless--edge) | 3 |
 | [☁️ VPS & Cloud Infrastructure](#vps--cloud-infrastructure) | 7 |
 | [🎨 No-Code & Low-Code Builders](#no-code--low-code-builders) | 6 |
-| **Total** | **72** |
+| **Total** | **73** |
 <!-- CATEGORY_STATS_END -->
 
 ---
@@ -109,6 +109,7 @@ A curated collection of free web hosting platforms for static sites, full-stack 
 |26 | Cloady | App and database hosting from GitHub, Docker images, folders or templates. | 0.5 vCPU, 1 GB RAM, 5 GB persistent SSD and 200 GB traffic per workspace. No card; phone verification required. Exceeding any resource allowance makes the full workspace capacity billable. | https://cloady.com |
 |27 | Light Cloud | Git-based app and static site hosting. | $1 of usage/mo, 3 server apps (scale to zero), unlimited static sites, no card. | https://light-cloud.com |
 |28 | Uppcoder | App hosting with its own database, VS Code in the browser and SSH. | 1 app + PostgreSQL, MySQL or MariaDB, 2 GB RAM, 2 GB disk, own HTTPS address, does not sleep, no expiry, no card. | https://portal.uppcoder.com |
+|29 | Bot-Hosting.net | Bot, app, website and database hosting with GitHub deploy, hosted in the EU. | 1 deployment (bot, app or database), 256 MB RAM, 512 MB storage, no card, no sleep. One click every 4 days keeps it alive, nothing is deleted if you miss it. | https://bot-hosting.net |
 
 ---
 
