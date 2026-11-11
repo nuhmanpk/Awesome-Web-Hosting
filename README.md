@@ -75,6 +75,7 @@ A curated collection of free web hosting platforms for static sites, full-stack 
 |28 | Shipvela | Static site hosting from GitHub or the CLI. | 3 projects, 20 publishes/mo, custom domains and HTTPS; no card. | https://shipvela.com |
 |29 | deed.page | Static hosting API for AI agents: publish an HTML file or a folder to a permanent subdomain URL with one curl request or the MCP server. | 25 sites, 25 MB per site, 60 publishes/hour, 1 custom domain; no account or card. | https://deed.page |
 |30 | Webly | Website hosting for AI agents: publish static files or a folder to a live URL from an agent over MCP or the helper script, with drafts, version history and forms. | 25 sites, 1 GB storage, 100 MB max file, webly.site subdomain only (custom domains on paid plans), Webly badge shown; no card. | https://webly.ai |
+|31 | Reliant | Static site and SPA hosting on a CDN, deployed with the open-source forge CLI. | 1 static site per organization, 1 GiB storage, 10 GiB traffic/mo; no card. Deploys without an account stay live 72 hours unless claimed. | https://reliantlabs.io |
 
 ---
 
