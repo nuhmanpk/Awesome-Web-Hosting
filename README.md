@@ -127,6 +127,7 @@ Backends, databases, PHP, Docker, bots — anything that needs a running server.
 | [SourceForge](https://sourceforge.net) | OSS hosting. | Unlimited projects. |
 | [StormKit](https://stormkit.io) | App deploy platform. | Unlimited sites. |
 | [Uppcoder](https://portal.uppcoder.com) | App hosting with its own database, VS Code in the browser and SSH. | 1 app + PostgreSQL, MySQL or MariaDB, 2 GB RAM, 2 GB disk, own HTTPS address, does not sleep, no expiry, no card. |
+| [Zenavo](https://www.zenavo.app) | Deploys Git or Docker apps to your own VPS over SSH. | Free plan requires bringing your own VPS; paid from $5/month. |
 
 <div align="right"><a href="#top">↑ Back to top</a></div>
 
