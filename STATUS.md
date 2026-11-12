@@ -6,9 +6,9 @@
 
 **Live reachability check for every service in [Free Web Hosting Gems](README.md).**
 
-![Reachable](https://img.shields.io/badge/Reachable-96%25-2ea44f?style=for-the-badge) ![Services](https://img.shields.io/badge/Services-72-0366d6?style=for-the-badge)
+![Reachable](https://img.shields.io/badge/Reachable-96%25-2ea44f?style=for-the-badge) ![Services](https://img.shields.io/badge/Services-73-0366d6?style=for-the-badge)
 
-🕒 Last checked **2026-11-11 06:46 UTC** · [← Back to the list](README.md)
+🕒 Last checked **2026-11-12 11:46 UTC** · [← Back to the list](README.md)
 
 </div>
 
@@ -18,7 +18,7 @@
 
 | 🟢 Online | 🟡 Redirect | 🛡️ Blocked | 🔴 Offline | ⚠️ Error | ⏱️ Timeout | ❔ Unknown |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| **66** | **0** | **3** | **0** | **2** | **1** | **0** |
+| **67** | **0** | **3** | **0** | **2** | **1** | **0** |
 
 ## 🚨 Needs Attention
 
@@ -73,7 +73,7 @@ These services did not return a clean response. Please verify before relying on 
 </details>
 
 <details>
-<summary><b>🔧 Full-Stack Platforms</b> — ⚠️ 24/27 online</summary>
+<summary><b>🔧 Full-Stack Platforms</b> — ⚠️ 25/28 online</summary>
 
 | Service | Status | HTTP |
 |---|---|:---:|
@@ -104,6 +104,7 @@ These services did not return a clean response. Please verify before relying on 
 | [SourceForge](https://sourceforge.net) | 🟢 Online | `200` |
 | [StormKit](https://stormkit.io) | 🟢 Online | `200` |
 | [Uppcoder](https://portal.uppcoder.com) | 🟢 Online | `200` |
+| [Zenavo](https://www.zenavo.app) | 🟢 Online | `200` |
 
 </details>
 
