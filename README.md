@@ -44,12 +44,12 @@ Not sure where to start? Popular picks by use case:
 | Category | Services |
 |---|---:|
 | [🌐 Static Site Hosting](#-static-site-hosting) | 29 |
-| [🔧 Full-Stack Platforms](#-full-stack-platforms) | 27 |
+| [🔧 Full-Stack Platforms](#-full-stack-platforms) | 28 |
 | [⚡ Serverless & Edge](#-serverless--edge) | 3 |
 | [☁️ VPS & Cloud Infrastructure](#-vps--cloud-infrastructure) | 7 |
 | [🎨 No-Code & Low-Code Builders](#-no-code--low-code-builders) | 6 |
 | [🧪 Indie & Hobby Projects](#-indie--hobby-projects) | 0 |
-| **Total** | **72** |
+| **Total** | **73** |
 <!-- CATEGORY_STATS_END -->
 
 ---
