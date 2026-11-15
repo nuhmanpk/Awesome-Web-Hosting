@@ -67,6 +67,7 @@ HTML/CSS/JS, static site generators, docs, portfolios.
 | [Deploy Now](https://deploynow.space) | GitHub-powered deploys. | 3 projects, custom domains. |
 | [DigitalOcean App Platform](https://www.digitalocean.com) | Static & apps. | 3 sites, 1 GB transfer. |
 | [Drive to Web](https://drv.tw) | Drive-based hosting. | Unlimited sites. |
+| [FileShare Pro](https://file-share-pro.com) | Upload an HTML file or PDF and get a link; guests comment on the page without an account. MCP server, REST API and CLI. | 50 files, 1 GB storage, 100 MB per file, badge on shared pages. |
 | [Framagit Pages](https://framagit.org) | OSS Git hosting. | Unlimited projects. |
 | [GitHub Pages](https://pages.github.com) | Repo websites. | Unlimited sites. |
 | [GitLab Pages](https://gitlab.com) | CI-based hosting. | Unlimited projects. |
