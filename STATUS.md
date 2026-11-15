@@ -6,9 +6,9 @@
 
 **Live reachability check for every service in [Free Web Hosting Gems](README.md).**
 
-![Reachable](https://img.shields.io/badge/Reachable-96%25-2ea44f?style=for-the-badge) ![Services](https://img.shields.io/badge/Services-73-0366d6?style=for-the-badge)
+![Reachable](https://img.shields.io/badge/Reachable-96%25-2ea44f?style=for-the-badge) ![Services](https://img.shields.io/badge/Services-74-0366d6?style=for-the-badge)
 
-🕒 Last checked **2026-11-12 11:46 UTC** · [← Back to the list](README.md)
+🕒 Last checked **2026-11-15 18:37 UTC** · [← Back to the list](README.md)
 
 </div>
 
@@ -18,7 +18,7 @@
 
 | 🟢 Online | 🟡 Redirect | 🛡️ Blocked | 🔴 Offline | ⚠️ Error | ⏱️ Timeout | ❔ Unknown |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| **67** | **0** | **3** | **0** | **2** | **1** | **0** |
+| **68** | **0** | **3** | **0** | **2** | **1** | **0** |
 
 ## 🚨 Needs Attention
 
@@ -36,7 +36,7 @@ These services did not return a clean response. Please verify before relying on 
 ## 🗂️ By Category
 
 <details>
-<summary><b>🌐 Static Site Hosting</b> — ⚠️ 28/29 online</summary>
+<summary><b>🌐 Static Site Hosting</b> — ⚠️ 29/30 online</summary>
 
 | Service | Status | HTTP |
 |---|---|:---:|
@@ -47,6 +47,7 @@ These services did not return a clean response. Please verify before relying on 
 | [Deploy Now](https://deploynow.space) | 🟢 Online | `200` |
 | [DigitalOcean App Platform](https://www.digitalocean.com) | 🟢 Online | `200` |
 | [Drive to Web](https://drv.tw) | ⚠️ Error | `000` |
+| [FileShare Pro](https://file-share-pro.com) | 🟢 Online | `200` |
 | [Framagit Pages](https://framagit.org) | 🟢 Online | `200` |
 | [GitHub Pages](https://pages.github.com) | 🟢 Online | `200` |
 | [GitLab Pages](https://gitlab.com) | 🟢 Online | `200` |
