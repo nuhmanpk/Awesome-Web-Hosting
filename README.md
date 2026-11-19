@@ -48,8 +48,8 @@ Not sure where to start? Popular picks by use case:
 | [⚡ Serverless & Edge](#-serverless--edge) | 3 |
 | [☁️ VPS & Cloud Infrastructure](#-vps--cloud-infrastructure) | 7 |
 | [🎨 No-Code & Low-Code Builders](#-no-code--low-code-builders) | 6 |
-| [🧪 Indie & Hobby Projects](#-indie--hobby-projects) | 0 |
-| **Total** | **74** |
+| [🧪 Indie & Hobby Projects](#-indie--hobby-projects) | 1 |
+| **Total** | **75** |
 <!-- CATEGORY_STATS_END -->
 
 ---
