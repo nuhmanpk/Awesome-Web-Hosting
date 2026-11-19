@@ -192,6 +192,7 @@ Free hosting built and run by **solo devs and small hobby teams**. Made somethin
 
 | Service | Description | Free Tier Highlights |
 |---|---|---|
+| [droply](https://droply.so) | Upload an HTML file, a zipped static site, a PDF or other files and get a link on a droply.page subdomain. Publish from the browser, a CLI, a REST API or an MCP connector for Claude and ChatGPT. | 1 project, 10 MB, 5,000 visits/month, droply badge on free pages; 24-hour links without an account. |
 
 **Built a free host?** [Add yours](CONTRIBUTING.md#-indie--hobby-projects): one row, in alphabetical order, via a pull request.
 
