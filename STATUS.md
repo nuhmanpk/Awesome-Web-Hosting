@@ -6,9 +6,9 @@
 
 **Live reachability check for every service in [Free Web Hosting Gems](README.md).**
 
-![Reachable](https://img.shields.io/badge/Reachable-96%25-2ea44f?style=for-the-badge) ![Services](https://img.shields.io/badge/Services-75-0366d6?style=for-the-badge)
+![Reachable](https://img.shields.io/badge/Reachable-96%25-2ea44f?style=for-the-badge) ![Services](https://img.shields.io/badge/Services-76-0366d6?style=for-the-badge)
 
-🕒 Last checked **2026-11-19 08:12 UTC** · [← Back to the list](README.md)
+🕒 Last checked **2026-11-21 02:38 UTC** · [← Back to the list](README.md)
 
 </div>
 
@@ -18,7 +18,7 @@
 
 | 🟢 Online | 🟡 Redirect | 🛡️ Blocked | 🔴 Offline | ⚠️ Error | ⏱️ Timeout | ❔ Unknown |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| **69** | **0** | **3** | **0** | **2** | **1** | **0** |
+| **70** | **0** | **3** | **0** | **2** | **1** | **0** |
 
 ## 🚨 Needs Attention
 
@@ -36,7 +36,7 @@ These services did not return a clean response. Please verify before relying on 
 ## 🗂️ By Category
 
 <details>
-<summary><b>🌐 Static Site Hosting</b> — ⚠️ 29/30 online</summary>
+<summary><b>🌐 Static Site Hosting</b> — ⚠️ 30/31 online</summary>
 
 | Service | Status | HTTP |
 |---|---|:---:|
@@ -59,6 +59,7 @@ These services did not return a clean response. Please verify before relying on 
 | [Netlify](https://www.netlify.com) | 🟢 Online | `200` |
 | [Nippy](https://nippy.host) | 🟢 Online | `200` |
 | [OneClickLive](https://oneclicklive.app) | 🟢 Online | `200` |
+| [Pagehaus](https://pagehaus.app) | 🟢 Online | `200` |
 | [Pagekite](https://pagekite.net) | 🟢 Online | `200` |
 | [PandaStack](https://www.pandastack.io) | 🟢 Online | `200` |
 | [Read the Docs](https://readthedocs.org) | 🟢 Online | `200` |
