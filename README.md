@@ -43,13 +43,13 @@ Not sure where to start? Popular picks by use case:
 <!-- CATEGORY_STATS_START -->
 | Category | Services |
 |---|---:|
-| [🌐 Static Site Hosting](#-static-site-hosting) | 30 |
+| [🌐 Static Site Hosting](#-static-site-hosting) | 31 |
 | [🔧 Full-Stack Platforms](#-full-stack-platforms) | 28 |
 | [⚡ Serverless & Edge](#-serverless--edge) | 3 |
 | [☁️ VPS & Cloud Infrastructure](#-vps--cloud-infrastructure) | 7 |
 | [🎨 No-Code & Low-Code Builders](#-no-code--low-code-builders) | 6 |
 | [🧪 Indie & Hobby Projects](#-indie--hobby-projects) | 1 |
-| **Total** | **75** |
+| **Total** | **76** |
 <!-- CATEGORY_STATS_END -->
 
 ---
