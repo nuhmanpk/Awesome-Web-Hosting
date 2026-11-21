@@ -79,6 +79,7 @@ HTML/CSS/JS, static site generators, docs, portfolios.
 | [Netlify](https://www.netlify.com) | Automate modern web projects. | Unlimited sites, 100 GB/mo bandwidth. |
 | [Nippy](https://nippy.host) | Drag in files, photos, or a whole folder and get a permanent public link — static sites or any files, no build step. Handy for sharing AI-generated pages and docs. | 1 site, 25 MB storage, no card. |
 | [OneClickLive](https://oneclicklive.app) | Paste HTML/JSX, get a live HTTPS URL in 3 seconds. Auto-wraps React without a build step. | No account required for first deploy. |
+| [Pagehaus](https://pagehaus.app) | Hosting for plain HTML sites: upload in the browser, over SFTP, with a CLI, or from Claude and ChatGPT over MCP. Server Side Includes, contact forms, Markdown blog. | 1 site, 250 MB, 20 GB/mo traffic, 50 form messages/mo, HTTPS on pagehaus.site; no card. |
 | [Pagekite](https://pagekite.net) | Local tunnel hosting. | 1 site. |
 | [PandaStack](https://www.pandastack.io) | Static + containers. | 1 site free. |
 | [Read the Docs](https://readthedocs.org) | Docs hosting. | Unlimited projects. |
