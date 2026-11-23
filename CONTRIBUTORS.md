@@ -33,8 +33,9 @@ Everyone who has added, updated or fixed a listing.
 Everyone who starred the repo. Star it to show up here.
 
 <!-- STAR_WALL_START -->
-<sub>259 people</sub>
+<sub>260 people</sub>
 
+<a href="https://github.com/tadeucbm" title="tadeucbm"><img src="https://avatars.githubusercontent.com/u/73614098?v=4&s=64" width="48" height="48" alt="tadeucbm" /></a>
 <a href="https://github.com/chandanmendiratta" title="chandanmendiratta"><img src="https://avatars.githubusercontent.com/u/71848326?v=4&s=64" width="48" height="48" alt="chandanmendiratta" /></a>
 <a href="https://github.com/WikioApps" title="WikioApps"><img src="https://avatars.githubusercontent.com/u/336784623?v=4&s=64" width="48" height="48" alt="WikioApps" /></a>
 <a href="https://github.com/Dcheema599" title="Dcheema599"><img src="https://avatars.githubusercontent.com/u/192763626?v=4&s=64" width="48" height="48" alt="Dcheema599" /></a>
@@ -301,8 +302,12 @@ Everyone who starred the repo. Star it to show up here.
 ## 🍴 Fork Wall
 
 <!-- FORK_WALL_START -->
-<sub>55 people</sub>
+<sub>58 people</sub>
 
+<a href="https://github.com/ademar" title="ademar"><img src="https://avatars.githubusercontent.com/u/140796?v=4&s=64" width="48" height="48" alt="ademar" /></a>
+<a href="https://github.com/khoneh011" title="khoneh011"><img src="https://avatars.githubusercontent.com/u/335502625?v=4&s=64" width="48" height="48" alt="khoneh011" /></a>
+<a href="https://github.com/fcl11" title="fcl11"><img src="https://avatars.githubusercontent.com/u/270169395?v=4&s=64" width="48" height="48" alt="fcl11" /></a>
+<a href="https://github.com/gectcanada-sys" title="gectcanada-sys"><img src="https://avatars.githubusercontent.com/u/293497621?v=4&s=64" width="48" height="48" alt="gectcanada-sys" /></a>
 <a href="https://github.com/filesharepro" title="filesharepro"><img src="https://avatars.githubusercontent.com/u/305632288?v=4&s=64" width="48" height="48" alt="filesharepro" /></a>
 <a href="https://github.com/HarriesCC" title="HarriesCC"><img src="https://avatars.githubusercontent.com/u/70427383?v=4&s=64" width="48" height="48" alt="HarriesCC" /></a>
 <a href="https://github.com/reliant-01" title="reliant-01"><img src="https://avatars.githubusercontent.com/u/225976313?v=4&s=64" width="48" height="48" alt="reliant-01" /></a>
@@ -315,7 +320,6 @@ Everyone who starred the repo. Star it to show up here.
 <a href="https://github.com/f-o-x11" title="f-o-x11"><img src="https://avatars.githubusercontent.com/u/239233855?v=4&s=64" width="48" height="48" alt="f-o-x11" /></a>
 <a href="https://github.com/vanrensbird" title="vanrensbird"><img src="https://avatars.githubusercontent.com/u/71326314?v=4&s=64" width="48" height="48" alt="vanrensbird" /></a>
 <a href="https://github.com/simongloel" title="simongloel"><img src="https://avatars.githubusercontent.com/u/17913511?v=4&s=64" width="48" height="48" alt="simongloel" /></a>
-<a href="https://github.com/bernisnukic" title="bernisnukic"><img src="https://avatars.githubusercontent.com/u/44529204?v=4&s=64" width="48" height="48" alt="bernisnukic" /></a>
 <a href="https://github.com/stefanautomateed" title="stefanautomateed"><img src="https://avatars.githubusercontent.com/u/144728893?v=4&s=64" width="48" height="48" alt="stefanautomateed" /></a>
 <a href="https://github.com/somdip-2310" title="somdip-2310"><img src="https://avatars.githubusercontent.com/u/109912555?v=4&s=64" width="48" height="48" alt="somdip-2310" /></a>
 <a href="https://github.com/njerschow" title="njerschow"><img src="https://avatars.githubusercontent.com/u/15145382?v=4&s=64" width="48" height="48" alt="njerschow" /></a>
