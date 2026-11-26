@@ -83,7 +83,7 @@ HTML/CSS/JS, static site generators, docs, portfolios.
 | [Pagekite](https://pagekite.net) | Local tunnel hosting. | 1 site. |
 | [PandaStack](https://www.pandastack.io) | Static + containers. | 1 site free. |
 | [Read the Docs](https://readthedocs.org) | Docs hosting. | Unlimited projects. |
-| [Reliant](https://reliantlabs.io) | Static site and SPA hosting on a CDN, deployed with the open-source forge CLI. | 1 static site per organization, 1 GiB storage, 10 GiB traffic/mo; no card. Deploys without an account stay live 72 hours unless claimed. |
+| [Reliant](https://reliantlabs.io) | Static site and SPA hosting on a CDN, deployed with the open-source forge CLI. | Any number of static sites in one organization per person; 1 GiB per site, 10 GiB storage and 10 GiB traffic/mo in total; no card. Deploys without an account stay live 72 hours unless claimed. |
 | [Shipvela](https://shipvela.com) | Static site hosting from GitHub or the CLI. | 3 projects, 20 publishes/mo, custom domains and HTTPS; no card. |
 | [Snapy](https://snapy.host) | Drop a file, an HTML page, or a zipped static site (React/Next export) and get a clean public link. Single files and AI-generated pages too. | No signup, 100 MB/file, links persist by default. |
 | [Surge](https://surge.sh) | CLI static deploy. | Unlimited sites. |
