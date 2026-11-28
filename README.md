@@ -44,12 +44,12 @@ Not sure where to start? Popular picks by use case:
 | Category | Services |
 |---|---:|
 | [🌐 Static Site Hosting](#-static-site-hosting) | 31 |
-| [🔧 Full-Stack Platforms](#-full-stack-platforms) | 28 |
+| [🔧 Full-Stack Platforms](#-full-stack-platforms) | 29 |
 | [⚡ Serverless & Edge](#-serverless--edge) | 3 |
 | [☁️ VPS & Cloud Infrastructure](#-vps--cloud-infrastructure) | 7 |
 | [🎨 No-Code & Low-Code Builders](#-no-code--low-code-builders) | 6 |
 | [🧪 Indie & Hobby Projects](#-indie--hobby-projects) | 1 |
-| **Total** | **76** |
+| **Total** | **77** |
 <!-- CATEGORY_STATS_END -->
 
 ---
@@ -119,6 +119,7 @@ Backends, databases, PHP, Docker, bots — anything that needs a running server.
 | [Heroku](https://heroku.com) | PaaS hosting. | Eco dynos. |
 | [InfinityFree](https://infinityfree.net) | PHP/MySQL hosting. | 5 GB disk. |
 | [Light Cloud](https://light-cloud.com) | Git-based app and static site hosting. | $1 of usage/mo, 3 server apps (scale to zero), unlimited static sites, no card. |
+| [Nife](https://nife.io) | Deploy apps across cloud, edge and private infrastructure from one control plane. | Free signup. |
 | [Pantheon](https://pantheon.io) | WP/Drupal PaaS. | Dev sites free. |
 | [Peon](https://peon.sh) | Open-source self-hostable Docker PaaS (Vercel/Heroku alternative). | Self-host free (MIT). |
 | [Prisma](https://www.prisma.io/) | Developer platform for TypeScript apps: managed Postgres, app hosting and an ORM. | Compute: 1M requests, 360 GB-hours, 4 vCPU-hours, 10 GB bandwidth/mo. Postgres: 50 databases, 2 GB, 200k operations/mo. Scales to zero, no card. |
